@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SettingsMenu.unity
     guid: e47a28b9035a53a40a35d87ccb3692a0
+  - enabled: 1
+    path: Assets/Scenes/WordsGame.unity
+    guid: 26121bebd4f1fa04685d35f0689b032a
   m_configObjects: {}
