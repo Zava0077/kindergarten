@@ -9,13 +9,8 @@ public class SelectOrnament : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
     [SerializeField] private Canvas canvas;
     RectTransform transform;
     CanvasGroup group;
-    Image image;
+    public Image image;
     public int CodeOrnament;
-
-    private void Start()
-    {
-        image = GameObject.Find("ImageOrnament").GetComponent<Image>();
-    }
 
     private void Awake()
     {

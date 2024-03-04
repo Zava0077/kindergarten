@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ReadyOrnament1
+      name: RussianOrnament_0
       rect:
         serializedVersion: 2
         x: 0
@@ -202,7 +202,7 @@ TextureImporter:
       name: RussianOrnament_02
       rect:
         serializedVersion: 2
-        x: 230
+        x: 232
         y: 379
         width: 115
         height: 210
@@ -312,7 +312,7 @@ TextureImporter:
         width: 115
         height: 210
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,6 +320,199 @@ TextureImporter:
       bones: []
       spriteID: 95e109fa30ad63d46ac875a019199347
       internalID: -123563175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussianOrnament_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 620
+        width: 920
+        height: 299
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9c65408ee27ff42983c192cc65f987
+      internalID: 1248476712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussianOrnament_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 620
+        width: 115
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -57.5, y: 148}
+        - {x: -57.5, y: -148}
+        - {x: 57.5, y: -148}
+        - {x: 57.5, y: 148}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4295f047a519e194b8672229b462aba7
+      internalID: 605420114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussianOrnament_11
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 620
+        width: 115
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5936efb2a23f4064684b52c248e89a1f
+      internalID: 932834465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussianOrnament_12
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 620
+        width: 115
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a875f6f956c498740bd0f9d6b975adb3
+      internalID: -463583852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussianOrnament_13
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 620
+        width: 115
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c217ac38eedf043a7eb2c01573fc0e
+      internalID: -893411798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussianOrnament_14
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 620
+        width: 115
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 456df69685cf63e469d3ba59f1878c18
+      internalID: 1680268717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussianOrnament_15
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 620
+        width: 115
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af7d4780a760ca4a93d7e705abb4deb
+      internalID: 665821391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussianOrnament_16
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 620
+        width: 115
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b051ef810f97f94989d631b56727794
+      internalID: 1442715364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RussianOrnament_17
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 620
+        width: 116
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426d49c53975434479cc869f531ea2f8
+      internalID: 2136730665
       vertices: []
       indices: 
       edges: []
@@ -335,7 +528,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ReadyOrnament1: -1254090109
+      RussianOrnament_0: -1254090109
       RussianOrnament_00: -1329052935
       RussianOrnament_01: 471997094
       RussianOrnament_02: -1766690070
@@ -344,6 +537,16 @@ TextureImporter:
       RussianOrnament_05: -619370852
       RussianOrnament_06: 2118452722
       RussianOrnament_07: -123563175
+      RussianOrnament_1: 1248476712
+      RussianOrnament_10: 605420114
+      RussianOrnament_11: 932834465
+      RussianOrnament_12: -463583852
+      RussianOrnament_13: -893411798
+      RussianOrnament_14: 1680268717
+      RussianOrnament_15: 665821391
+      RussianOrnament_16: 1442715364
+      RussianOrnament_17: 2136730665
+      RussianOrnament_2: -1206597946
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

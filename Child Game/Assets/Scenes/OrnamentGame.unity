@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 500821677}
+  image: {fileID: 2084549490}
   CodeOrnament: 0
 --- !u!1 &49342621
 GameObject:
@@ -1775,6 +1776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 500821677}
+  image: {fileID: 69069604}
   CodeOrnament: 0
 --- !u!1 &721557151
 GameObject:
@@ -2266,6 +2268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 500821677}
+  image: {fileID: 1594452797}
   CodeOrnament: 0
 --- !u!1 &1066447824
 GameObject:
@@ -2767,6 +2770,25 @@ MonoBehaviour:
   - {fileID: 1826531920}
   - {fileID: 969965505}
   MainOrnament: {fileID: 1584199666}
+  Sprites:
+  - {fileID: -1254090109, guid: 4bb6fe5e4282a24429a4cb306028fa77, type: 3}
+  - {fileID: -1329052935, guid: 4bb6fe5e4282a24429a4cb306028fa77, type: 3}
+  - {fileID: 471997094, guid: 4bb6fe5e4282a24429a4cb306028fa77, type: 3}
+  - {fileID: -1766690070, guid: 4bb6fe5e4282a24429a4cb306028fa77, type: 3}
+  - {fileID: -1731851979, guid: 4bb6fe5e4282a24429a4cb306028fa77, type: 3}
+  - {fileID: -1468387819, guid: 4bb6fe5e4282a24429a4cb306028fa77, type: 3}
+  - {fileID: -619370852, guid: 4bb6fe5e4282a24429a4cb306028fa77, type: 3}
+  - {fileID: 2118452722, guid: 4bb6fe5e4282a24429a4cb306028fa77, type: 3}
+  - {fileID: -123563175, guid: 4bb6fe5e4282a24429a4cb306028fa77, type: 3}
+  - {fileID: 1248476712, guid: 4bb6fe5e4282a24429a4cb306028fa77, type: 3}
+  - {fileID: 605420114, guid: 4bb6fe5e4282a24429a4cb306028fa77, type: 3}
+  - {fileID: 932834465, guid: 4bb6fe5e4282a24429a4cb306028fa77, type: 3}
+  - {fileID: -463583852, guid: 4bb6fe5e4282a24429a4cb306028fa77, type: 3}
+  - {fileID: -893411798, guid: 4bb6fe5e4282a24429a4cb306028fa77, type: 3}
+  - {fileID: 1680268717, guid: 4bb6fe5e4282a24429a4cb306028fa77, type: 3}
+  - {fileID: 665821391, guid: 4bb6fe5e4282a24429a4cb306028fa77, type: 3}
+  - {fileID: 1442715364, guid: 4bb6fe5e4282a24429a4cb306028fa77, type: 3}
+  - {fileID: 2136730665, guid: 4bb6fe5e4282a24429a4cb306028fa77, type: 3}
 --- !u!1 &1340400637
 GameObject:
   m_ObjectHideFlags: 0
@@ -3138,6 +3160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 500821677}
+  image: {fileID: 1823022458}
   CodeOrnament: 0
 --- !u!225 &1474068105
 CanvasGroup:
@@ -3283,7 +3306,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1254090109, guid: 4bb6fe5e4282a24429a4cb306028fa77, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3740,6 +3763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 500821677}
+  image: {fileID: 1447630313}
   CodeOrnament: 0
 --- !u!1 &1735876437
 GameObject:
@@ -3880,6 +3904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 500821677}
+  image: {fileID: 868547342}
   CodeOrnament: 0
 --- !u!1 &1823022456
 GameObject:
@@ -4020,6 +4045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 500821677}
+  image: {fileID: 136282454}
   CodeOrnament: 0
 --- !u!1 &1851768496
 GameObject:
@@ -4136,6 +4162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 500821677}
+  image: {fileID: 1567658752}
   CodeOrnament: 0
 --- !u!1 &1924961891
 GameObject:
@@ -4351,6 +4378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 500821677}
+  image: {fileID: 721557153}
   CodeOrnament: 0
 --- !u!1 &2084549488
 GameObject:
