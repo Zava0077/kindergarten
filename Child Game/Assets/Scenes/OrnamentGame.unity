@@ -157,9 +157,9 @@ RectTransform:
   - {fileID: 2084549489}
   m_Father: {fileID: 85988874}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 1122, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 210, y: -3}
   m_SizeDelta: {x: 154, y: 294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &30866127
@@ -189,6 +189,7 @@ MonoBehaviour:
   canvas: {fileID: 500821677}
   image: {fileID: 2084549490}
   CodeOrnament: 0
+  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &49342621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1778,6 +1779,7 @@ MonoBehaviour:
   canvas: {fileID: 500821677}
   image: {fileID: 69069604}
   CodeOrnament: 0
+  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &721557151
 GameObject:
   m_ObjectHideFlags: 0
@@ -2270,6 +2272,7 @@ MonoBehaviour:
   canvas: {fileID: 500821677}
   image: {fileID: 1594452797}
   CodeOrnament: 0
+  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1066447824
 GameObject:
   m_ObjectHideFlags: 0
@@ -3162,6 +3165,7 @@ MonoBehaviour:
   canvas: {fileID: 500821677}
   image: {fileID: 1823022458}
   CodeOrnament: 0
+  pos: {x: 0, y: 0, z: 0}
 --- !u!225 &1474068105
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3765,6 +3769,7 @@ MonoBehaviour:
   canvas: {fileID: 500821677}
   image: {fileID: 1447630313}
   CodeOrnament: 0
+  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1735876437
 GameObject:
   m_ObjectHideFlags: 0
@@ -3906,6 +3911,7 @@ MonoBehaviour:
   canvas: {fileID: 500821677}
   image: {fileID: 868547342}
   CodeOrnament: 0
+  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1823022456
 GameObject:
   m_ObjectHideFlags: 0
@@ -4047,6 +4053,7 @@ MonoBehaviour:
   canvas: {fileID: 500821677}
   image: {fileID: 136282454}
   CodeOrnament: 0
+  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1851768496
 GameObject:
   m_ObjectHideFlags: 0
@@ -4164,6 +4171,7 @@ MonoBehaviour:
   canvas: {fileID: 500821677}
   image: {fileID: 1567658752}
   CodeOrnament: 0
+  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1924961891
 GameObject:
   m_ObjectHideFlags: 0
@@ -4380,6 +4388,7 @@ MonoBehaviour:
   canvas: {fileID: 500821677}
   image: {fileID: 721557153}
   CodeOrnament: 0
+  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2084549488
 GameObject:
   m_ObjectHideFlags: 0

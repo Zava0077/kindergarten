@@ -11,9 +11,11 @@ public class SelectOrnament : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
     CanvasGroup group;
     public Image image;
     public int CodeOrnament;
+    public Vector3 pos;
 
     private void Awake()
     {
+        pos = this.gameObject.transform.position;
         transform = GetComponent<RectTransform>();
         group = GetComponent<CanvasGroup>();
     }
