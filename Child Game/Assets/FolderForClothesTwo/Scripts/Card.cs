@@ -9,22 +9,27 @@ public class Card : MonoBehaviour
 
 	[SerializeField] private Sprite _backSprite;
 	[SerializeField] private Sprite _frontSprite;
-	[SerializeField] private Sprite _winSprite;
-
+	[SerializeField] private Sprite _findSprite;
 
 	[SerializeField] private int _number;
 
 	public bool Down => this.GetComponent<Image>().sprite == _frontSprite;
+	public bool Find => this.GetComponent<Image>().sprite == _findSprite;
 	public int Number => _number;
 
 	public void OnMouseDown()
 	{
-		if (!Down)
+		if(!Find)
 		{
-			this.GetComponent<Image>().sprite = _frontSprite;
-			_game.OpenCards();
-		}
-		
+			if (!_game.FindCard)
+			{
+				if (!Down)
+				{
+					this.GetComponent<Image>().sprite = _frontSprite;
+					_game.OpenCards();
+				}
+			}
+		}	
 	}
 
 	public void NoFindCard()
@@ -33,7 +38,7 @@ public class Card : MonoBehaviour
 	}
 	public void FindCard()
 	{
-		this.GetComponent<Image>().sprite = _winSprite;
+		this.GetComponent<Image>().sprite = _findSprite;
 	}
 
 }

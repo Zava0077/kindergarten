@@ -8,6 +8,16 @@ public class Game : MonoBehaviour
 	[SerializeField] private List<Card> _cards;
 
 	[SerializeField] private int _numberCard;
+	[SerializeField] private bool _findCard;
+
+	[SerializeField] private GameObject _winPanel;
+
+	public bool FindCard => _findCard;
+
+	public void Awake()
+	{
+		_panelCard.GetChild(1).transform.SetSiblingIndex(Random.Range(0, _panelCard.childCount));
+	}
 
 	public void Start()
 	{
@@ -65,7 +75,7 @@ public class Game : MonoBehaviour
 		{
 			if (card.Down)
 			{
-				card.GetComponent<Card>().FindCard();
+				StartCoroutine(Win(card));
 			}
 		}
 	}
@@ -75,8 +85,44 @@ public class Game : MonoBehaviour
 		{
 			if (card.Down)
 			{
-				card.GetComponent<Card>().NoFindCard();
+				StartCoroutine(NoFind(card));
 			}
+		}
+	}
+
+	IEnumerator NoFind(Card card)
+	{
+		_findCard = true;
+		yield return new WaitForSeconds(1f);
+		card.GetComponent<Card>().NoFindCard();
+		_findCard = false;
+	}
+
+	IEnumerator Win(Card card)
+	{
+		_findCard = true;
+		yield return new WaitForSeconds(1f);
+		card.GetComponent<Card>().FindCard();
+		_findCard = false;
+		Win();
+	}
+
+	public void Win()
+	{
+		var a = 0;
+
+		foreach (Card card in _cards)
+		{
+			if (card.Find)
+			{
+				a++;
+			}
+		}
+
+		if (a == _panelCard.childCount) 
+		{ 
+			_winPanel.SetActive(true);
+		
 		}
 	}
 }
