@@ -102,7 +102,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 602
-        width: 592
+        width: 593
         height: 594
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -228,6 +228,74 @@ TextureImporter:
       bones: []
       spriteID: b0f342d49a35a00479b0e51bf4f9bcd0
       internalID: 37118570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: image (1)-gigapixel-high fidelity v2-2x_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 198
+        width: 834
+        height: 802
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -406, y: 42}
+        - {x: -389, y: 129}
+        - {x: -363, y: 191}
+        - {x: -325, y: 246}
+        - {x: -301, y: 172}
+        - {x: -189, y: 291}
+        - {x: -265, y: 311}
+        - {x: -176, y: 368}
+        - {x: -90, y: 393}
+        - {x: -16, y: 398}
+        - {x: 68, y: 388}
+        - {x: 142, y: 366}
+        - {x: 182, y: 348}
+        - {x: 228, y: 314}
+        - {x: 154, y: 290}
+        - {x: 272, y: 179}
+        - {x: 296, y: 252}
+        - {x: 333, y: 188}
+        - {x: 354, y: 144}
+        - {x: 370, y: 89}
+        - {x: 378, y: -10}
+        - {x: 376, y: -53}
+        - {x: 361, y: -105}
+        - {x: 349, y: -146}
+        - {x: 327, y: -185}
+        - {x: 292, y: -246}
+        - {x: 270, y: -170}
+        - {x: 212, y: -222}
+        - {x: 158, y: -282}
+        - {x: 177, y: -293}
+        - {x: 232, y: -307}
+        - {x: 172, y: -342}
+        - {x: 90, y: -374}
+        - {x: 53, y: -385}
+        - {x: 12, y: -389}
+        - {x: -59, y: -389}
+        - {x: -118, y: -376}
+        - {x: -205, y: -344}
+        - {x: -261, y: -308}
+        - {x: -191, y: -285}
+        - {x: -245, y: -220}
+        - {x: -303, y: -173}
+        - {x: -323, y: -244}
+        - {x: -350, y: -203}
+        - {x: -371, y: -165}
+        - {x: -395, y: -103}
+        - {x: -407, y: -25}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b371b48f91c6045a67c8f1040fdb8c
+      internalID: 1624760216
       vertices: []
       indices: 
       edges: []

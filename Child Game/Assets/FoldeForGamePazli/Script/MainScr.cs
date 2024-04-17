@@ -26,8 +26,8 @@ public class MainScr : MonoBehaviour
         {
             slot.CodeSlot = 0;
         }
-        //int random = UnityEngine.Random.Range(0, sprites.Count / 5);
-        int random = 0;
+        int random = UnityEngine.Random.Range(0, sprites.Count / 5);
+        //int random = 0;
         random = random * 5;
         code = Enumerable.Range(1, 4).OrderBy(x => UnityEngine.Random.value).ToList();
         Hearth.sprite = sprites[random];
