@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 public class SelectOrnament : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
@@ -28,7 +29,15 @@ public class SelectOrnament : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
 
     public void OnDrag(PointerEventData pointerEventData)
     {
-        transform.anchoredPosition += pointerEventData.delta / canvas.scaleFactor;
+        Debug.Log(GetComponentInParent<MainScript>().Game.transform.rotation);
+        if(GetComponentInParent<MainScript>().Game.transform.rotation.z == 1)
+        {
+            transform.anchoredPosition -= pointerEventData.delta / canvas.scaleFactor;
+        }
+        else
+        {
+            transform.anchoredPosition += pointerEventData.delta / canvas.scaleFactor;
+        }
         
     }
 

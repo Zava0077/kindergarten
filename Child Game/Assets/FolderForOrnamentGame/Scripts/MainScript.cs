@@ -14,10 +14,16 @@ public class MainScript : MonoBehaviour
     List<int> check = new List<int>();
     public Image MainOrnament;
     public List<Sprite> Sprites = new List<Sprite>();
+    public List<Sprite> Flags = new List<Sprite>();
+    public GameObject WinObject;
     float time = 0f;
+    public GameObject Game;
+    AudioSource Audio;
 
-    private void RestartGame()
+    public void RestartGame()
     {
+        Audio.Play();
+        WinObject.SetActive(false);
         foreach (var slot in selectOrnaments)
         {
             slot.CodeOrnament = 0;
@@ -58,6 +64,7 @@ public class MainScript : MonoBehaviour
 
     void Start()
     {
+        Audio = GetComponent<AudioSource>();
         RestartGame();
     }
 
@@ -71,13 +78,18 @@ public class MainScript : MonoBehaviour
         }
         if(check.SequenceEqual<int>(new List<int> { 1,2,3,4,5,6,7,8 }))
         {
+            WinObject.SetActive(true);
+            Audio.Play();
+            /*
             time = time + Time.deltaTime;
             Debug.Log(time);
-            if(time >= 5f)
+            if(time >= 3f)
             {
+                Audio.Play();
                 time = 0f;
                 RestartGame();
             }
+            */
         }
     }
 }
