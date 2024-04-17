@@ -16,8 +16,8 @@ public class SelectOrnament : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
 
     private void Awake()
     {
-        pos = this.gameObject.transform.position;
         transform = GetComponent<RectTransform>();
+        pos = transform.localPosition;
         group = GetComponent<CanvasGroup>();
     }
     public void OnBeginDrag(PointerEventData pointerEventData)
@@ -29,7 +29,6 @@ public class SelectOrnament : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
 
     public void OnDrag(PointerEventData pointerEventData)
     {
-        Debug.Log(GetComponentInParent<MainScript>().Game.transform.rotation);
         if(GetComponentInParent<MainScript>().Game.transform.rotation.z == 1)
         {
             transform.anchoredPosition -= pointerEventData.delta / canvas.scaleFactor;

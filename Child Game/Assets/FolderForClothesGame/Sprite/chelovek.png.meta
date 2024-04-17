@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 83533fc9aa34edc469ec3c61098ee413
+guid: ef53885011ad5914ab9e5eafd24d0809
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,17 +43,17 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 879, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -136,60 +136,82 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Belarus_0
+      name: chelovek_0
       rect:
         serializedVersion: 2
-        x: 150
-        y: 211
-        width: 1130
-        height: 429
+        x: 0
+        y: 1628
+        width: 1200
+        height: 813
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -306.11908, y: -214.5}
-        - {x: -565, y: -214.5}
-        - {x: -565, y: 214.5}
-        - {x: -208.7059, y: 214.5}
-        - {x: 164.30798, y: 214.5}
-        - {x: 565, y: 214.5}
-        - {x: 565, y: -156.85675}
-        - {x: 565, y: -214.5}
-      physicsShape:
-      - - {x: -564.68726, y: -6.923828}
-        - {x: -564.68726, y: 211.09344}
-        - {x: -191.67334, y: 211.09344}
-        - {x: 543.448, y: 214.5}
-        - {x: 290.3493, y: -214.5}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4712c8fa8a25ba45b796bf71fe5cd90
-      internalID: -1267113260
+      spriteID: 0d0ade66c5547e84dac6f6381dc62638
+      internalID: -1146062740
       vertices: []
       indices: 
       edges: []
       weights: []
-    outline:
-    - - {x: -640, y: 320}
-      - {x: -640, y: -320}
-      - {x: 640, y: -320}
-      - {x: 640, y: 320}
-    physicsShape:
-    - - {x: 226.46167, y: -44.581512}
-      - {x: -640, y: 320}
-      - {x: -640, y: -320}
-      - {x: 640, y: -320}
-      - {x: 640, y: 320}
+    - serializedVersion: 2
+      name: chelovek_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 813
+        width: 1200
+        height: 813
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 574972400e795af4f9262172b60043bf
+      internalID: 825043505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chelovek_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1200
+        height: 813
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 827b3ba13582ccc4095338f144c8d70c
+      internalID: 247606407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Belarus_0: -1267113260
+      chelovek_0: -1146062740
+      chelovek_1: 825043505
+      chelovek_2: 247606407
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
