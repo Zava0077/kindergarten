@@ -23,4 +23,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WordsGame.unity
     guid: 26121bebd4f1fa04685d35f0689b032a
+  - enabled: 1
+    path: Assets/Scenes/clothes.unity
+    guid: 418f14e7d40043e41a9d9d7e2dab3092
+  - enabled: 1
   m_configObjects: {}
