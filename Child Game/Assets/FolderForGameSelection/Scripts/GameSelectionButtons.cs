@@ -10,4 +10,9 @@ public class GameSelectionButtons : MonoBehaviour
     {
         SceneManager.LoadScene("OrnamentGame");
     }
+    
+    public void ClothesGame()
+    {
+        SceneManager.LoadScene("clothes");
+    }
 }
