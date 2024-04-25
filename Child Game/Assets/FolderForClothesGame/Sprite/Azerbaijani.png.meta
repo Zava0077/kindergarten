@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b7bd51d6f6a70e54fb6bd28054f1bd8c
+guid: 28836cdd4df061242ab648679dd8848b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chelovek_0
+      name: Azerbaijani_man
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 304
-        height: 679
+        x: 10
+        y: 42
+        width: 150
+        height: 347
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,125 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6158152b3a533a8498fc35dafb1f8784
-      internalID: -273200401
+      spriteID: c8c4279d4e72eda47aa49dbd270f7acc
+      internalID: -774934079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chelovek_1
+      name: Azerbaijani_woman
       rect:
         serializedVersion: 2
-        x: 0
-        y: 471
-        width: 304
-        height: 208
+        x: 202
+        y: 43
+        width: 246
+        height: 339
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b85257fa4baa8549ab6057e5c5db905
+      internalID: 1066196571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azerbaijani_manhead
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 280
+        width: 150
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031c68c69c6ee0d47b669b659686408b
+      internalID: 763195459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azerbaijani_manbody
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 144
+        width: 150
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd8ddf6d818e0e479b960ded8a3c4e4
+      internalID: -248428706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azerbaijani_manboots
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 42
+        width: 150
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f7925383a2613943b023684232d6cb0
+      internalID: 2139092185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azerbaijani_womanhead
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 265
+        width: 246
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db9fc0dd296ffa246b315a684924afdd
+      internalID: 399592177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azerbaijani_womanbody
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 141
+        width: 244
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +276,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c5d4a7833b995644a8c01f153281111
-      internalID: -1469191965
+      spriteID: 9835924e1b44f584a9db47fe7e10c630
+      internalID: -2115408783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chelovek_2
+      name: Azerbaijani_womanboots
       rect:
         serializedVersion: 2
-        x: 0
-        y: 225
-        width: 304
-        height: 246
+        x: 201
+        y: 43
+        width: 247
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,29 +297,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13ebe9243597be64b9b9231b18535dc1
-      internalID: 360855784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chelovek_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 304
-        height: 224
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22a64a4f7d367dc46829ae1c55621984
-      internalID: -852532330
+      spriteID: ad1ad8c1f1ee27941b5ec70571e99fe5
+      internalID: 1238167983
       vertices: []
       indices: 
       edges: []
@@ -230,10 +314,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Chelovek_0: -273200401
-      Chelovek_1: -1469191965
-      Chelovek_2: 360855784
-      Chelovek_3: -852532330
+      Azerbaijani_man: -774934079
+      Azerbaijani_manbody: -248428706
+      Azerbaijani_manboots: 2139092185
+      Azerbaijani_manhead: 763195459
+      Azerbaijani_woman: 1066196571
+      Azerbaijani_womanbody: -2115408783
+      Azerbaijani_womanboots: 1238167983
+      Azerbaijani_womanhead: 399592177
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

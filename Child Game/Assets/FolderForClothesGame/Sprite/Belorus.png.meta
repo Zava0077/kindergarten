@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b7bd51d6f6a70e54fb6bd28054f1bd8c
+guid: 940e71cf807b83f40b65cb0a4ef1634c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chelovek_0
+      name: Belorus_man
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 304
-        height: 679
+        width: 430
+        height: 957
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,71 +150,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6158152b3a533a8498fc35dafb1f8784
-      internalID: -273200401
+      spriteID: 3923279598a0ead4bb43334e5d17c19d
+      internalID: 1373727084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chelovek_1
+      name: Belorus_women
       rect:
         serializedVersion: 2
-        x: 0
-        y: 471
-        width: 304
-        height: 208
+        x: 429
+        y: 0
+        width: 448
+        height: 957
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c5d4a7833b995644a8c01f153281111
-      internalID: -1469191965
+      spriteID: 349f9236cebc59a4abb9fec71de030e6
+      internalID: -246092448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chelovek_2
+      name: Belorus_manhead
       rect:
         serializedVersion: 2
         x: 0
-        y: 225
-        width: 304
-        height: 246
+        y: 656
+        width: 429
+        height: 301
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13ebe9243597be64b9b9231b18535dc1
-      internalID: 360855784
+      spriteID: 5dcc96cea18ab7549ac745abec6f295a
+      internalID: 1747661920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chelovek_3
+      name: Belorus_manbody
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 329
+        width: 429
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e52dc999c86fc924ea3ad59e7982ec53
+      internalID: -814213141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Belorus_manboots
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 304
-        height: 224
+        width: 430
+        height: 329
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22a64a4f7d367dc46829ae1c55621984
-      internalID: -852532330
+      spriteID: f728af167450436468d36abdf0191c6c
+      internalID: -106718411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Belorus_womanhead
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 657
+        width: 450
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3edeb3a7ee03c74ea2190cf57879fcf
+      internalID: 764728215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Belorus_womanbody
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 329
+        width: 448
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9860c5c22bfa4c4289058029747c537
+      internalID: -580316416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Belorus_womanboots
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 0
+        width: 448
+        height: 328
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef9753e1e0d8e1d45b22a80944d3c956
+      internalID: 2046517405
       vertices: []
       indices: 
       edges: []
@@ -230,10 +314,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Chelovek_0: -273200401
-      Chelovek_1: -1469191965
-      Chelovek_2: 360855784
-      Chelovek_3: -852532330
+      Belorus_man: 1373727084
+      Belorus_manbody: -814213141
+      Belorus_manboots: -106718411
+      Belorus_manhead: 1747661920
+      Belorus_womanbody: -580316416
+      Belorus_womanboots: 2046517405
+      Belorus_womanhead: 764728215
+      Belorus_women: -246092448
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

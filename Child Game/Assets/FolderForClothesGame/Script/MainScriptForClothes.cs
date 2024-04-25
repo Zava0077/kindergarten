@@ -5,7 +5,6 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using Unity.Mathematics;
-using TMPro.EditorUtilities;
 using System.Threading;
 
 public class MainScriptForClothes : MonoBehaviour
@@ -35,11 +34,11 @@ public class MainScriptForClothes : MonoBehaviour
     {
         TaskPanel.SetActive(false);
     }
-
     public void OpenTaskPanel()
     {
-        TaskPanel.SetActive(true); 
+        TaskPanel.SetActive(true);
     }
+
 
     public void RestartGame()
     {
@@ -63,6 +62,25 @@ public class MainScriptForClothes : MonoBehaviour
         {
             TaskText.text = "Необходимо одеть человека в татарский национальный костюм";
             TextBackground.text = "Нужно одеть в татарский костюм";
+        }else if (Sprites[random].name.Contains("Belorus"))
+        {
+            TaskText.text = "Необходимо одеть человека в белорусский национальный костюм";
+            TextBackground.text = "Нужно одеть в белорусский костюм";
+        }
+        else if (Sprites[random].name.Contains("Ukrain"))
+        {
+            TaskText.text = "Необходимо одеть человека в украинский национальный костюм";
+            TextBackground.text = "Нужно одеть в украинский костюм";
+        }
+        else if (Sprites[random].name.Contains("Kirgis"))
+        {
+            TaskText.text = "Необходимо одеть человека в киргизский национальный костюм";
+            TextBackground.text = "Нужно одеть в киргизский костюм";
+        }
+        else if (Sprites[random].name.Contains("Azerbaijani"))
+        {
+            TaskText.text = "Необходимо одеть человека в азербайджанский национальный костюм";
+            TextBackground.text = "Нужно одеть в азербайджанский костюм";
         }
         TaskImage.sprite = Sprites[random];
         code = Enumerable.Range(1, 3).OrderBy(x => UnityEngine.Random.value).ToList();

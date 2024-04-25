@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b7bd51d6f6a70e54fb6bd28054f1bd8c
+guid: 5c0cc835f6ea8c3468cb115d8a7597c5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,34 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chelovek_0
+      name: card1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 304
-        height: 679
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6158152b3a533a8498fc35dafb1f8784
-      internalID: -273200401
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chelovek_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 471
-        width: 304
-        height: 208
+        x: 44
+        y: 134
+        width: 177
+        height: 265
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c5d4a7833b995644a8c01f153281111
-      internalID: -1469191965
+      spriteID: c3b4ec1b935870a4da957bec6d418d52
+      internalID: 683836218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chelovek_2
+      name: card2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 225
-        width: 304
-        height: 246
+        x: 311
+        y: 133
+        width: 178
+        height: 266
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13ebe9243597be64b9b9231b18535dc1
-      internalID: 360855784
+      spriteID: 5e33c274448686042972a2d55f46857b
+      internalID: 865310946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chelovek_3
+      name: card3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 304
-        height: 224
+        x: 578
+        y: 133
+        width: 177
+        height: 266
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22a64a4f7d367dc46829ae1c55621984
-      internalID: -852532330
+      spriteID: a48d44d9f776af749b9f025a5ffc628b
+      internalID: 965217493
       vertices: []
       indices: 
       edges: []
@@ -230,10 +209,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Chelovek_0: -273200401
-      Chelovek_1: -1469191965
-      Chelovek_2: 360855784
-      Chelovek_3: -852532330
+      card1: 683836218
+      card2: 865310946
+      card3: 965217493
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

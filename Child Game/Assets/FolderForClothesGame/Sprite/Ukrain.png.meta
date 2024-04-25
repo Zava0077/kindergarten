@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b7bd51d6f6a70e54fb6bd28054f1bd8c
+guid: e83731852f2e6f3479c31accadaaa40d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chelovek_0
+      name: Ukrain_women
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 304
-        height: 679
+        width: 347
+        height: 1078
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6158152b3a533a8498fc35dafb1f8784
-      internalID: -273200401
+      spriteID: c1018cf5128bf0848b59c245da542eb8
+      internalID: -1489676624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chelovek_1
+      name: Ukrain_womenhead
       rect:
         serializedVersion: 2
         x: 0
-        y: 471
-        width: 304
-        height: 208
+        y: 669
+        width: 348
+        height: 409
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c5d4a7833b995644a8c01f153281111
-      internalID: -1469191965
+      spriteID: 815e3b45281a8f547b54570ae431e34c
+      internalID: -2119326513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chelovek_2
+      name: Ukrain_body
       rect:
         serializedVersion: 2
         x: 0
-        y: 225
-        width: 304
-        height: 246
+        y: 362
+        width: 347
+        height: 307
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13ebe9243597be64b9b9231b18535dc1
-      internalID: 360855784
+      spriteID: 6d07b2cdcf511f5468a88a00199ce37a
+      internalID: -2108304227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chelovek_3
+      name: Ukrain_boots
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 304
-        height: 224
+        width: 349
+        height: 361
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,8 +213,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22a64a4f7d367dc46829ae1c55621984
-      internalID: -852532330
+      spriteID: fbe69a8a99b5f1a4b8c9c60aa57d7588
+      internalID: -1184779057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ukrain_man
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 0
+        width: 348
+        height: 1078
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5810184a2e59a747a5033770985efad
+      internalID: -1478709248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ukrain_manhead
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 665
+        width: 347
+        height: 413
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25732eb7879f76845b627f0723c5e271
+      internalID: 77576865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ukrain_bod
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 355
+        width: 348
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88086f11cd93a84fb856a09e2c76afc
+      internalID: 103530250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ukrain_boot
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 0
+        width: 350
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d288783191633b44b19ed5d8b00149f
+      internalID: 962272025
       vertices: []
       indices: 
       edges: []
@@ -230,10 +314,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Chelovek_0: -273200401
-      Chelovek_1: -1469191965
-      Chelovek_2: 360855784
-      Chelovek_3: -852532330
+      Ukrain_bod: 103530250
+      Ukrain_body: -2108304227
+      Ukrain_boot: 962272025
+      Ukrain_boots: -1184779057
+      Ukrain_man: -1478709248
+      Ukrain_manhead: 77576865
+      Ukrain_women: -1489676624
+      Ukrain_womenhead: -2119326513
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

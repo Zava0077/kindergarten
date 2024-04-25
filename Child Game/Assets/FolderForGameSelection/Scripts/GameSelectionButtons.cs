@@ -20,4 +20,14 @@ public class GameSelectionButtons : MonoBehaviour
     {
         SceneManager.LoadScene("clothes");
     }
+
+    public void PuzzleGame()
+    {
+        SceneManager.LoadScene("GamePazli");
+    }
+    
+    public void PairGame()
+    {
+        SceneManager.LoadScene("Pair");
+    }
 }

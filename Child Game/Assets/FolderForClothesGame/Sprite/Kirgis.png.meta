@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b7bd51d6f6a70e54fb6bd28054f1bd8c
+guid: f146d0884fceb864b9a16356faf97b1a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chelovek_0
+      name: Kirgis_man
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 304
-        height: 679
+        y: 24
+        width: 290
+        height: 691
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,62 +150,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6158152b3a533a8498fc35dafb1f8784
-      internalID: -273200401
+      spriteID: a4c554c87e056cc4ba55a0c063d33d2f
+      internalID: 1034180212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chelovek_1
+      name: Kirgis_woman
       rect:
         serializedVersion: 2
-        x: 0
-        y: 471
-        width: 304
-        height: 208
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c5d4a7833b995644a8c01f153281111
-      internalID: -1469191965
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chelovek_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 225
-        width: 304
-        height: 246
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13ebe9243597be64b9b9231b18535dc1
-      internalID: 360855784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chelovek_3
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 453
         y: 0
-        width: 304
-        height: 224
+        width: 419
+        height: 715
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ccfb326df523e41bd91eaa658bdab2
+      internalID: -932800723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirgis_manhead
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 509
+        width: 289
+        height: 206
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,8 +192,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22a64a4f7d367dc46829ae1c55621984
-      internalID: -852532330
+      spriteID: 177c72ff5ae23e240b110dce0fb1bd87
+      internalID: 1053833624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirgis_manbody
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 252
+        width: 290
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9adcac6ad2eb78f4c9f3cc28c7f2cdf5
+      internalID: -2061702648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirgis_manboots
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 25
+        width: 290
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1068fb15bb868a14bb6b0fbf3d6d3e48
+      internalID: -1179498222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirgis_womanhea
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 482
+        width: 419
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970c51a4aec98bc4d8924b3c4d31ee53
+      internalID: -197586334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirgis_womanbody
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 231
+        width: 419
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd2dc28476780e46a519a46f2d63158
+      internalID: -250790014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kirgis_womanboots
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 0
+        width: 420
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3158c5dc57eba7c4e8af55e40aa654f8
+      internalID: 182534180
       vertices: []
       indices: 
       edges: []
@@ -230,10 +314,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Chelovek_0: -273200401
-      Chelovek_1: -1469191965
-      Chelovek_2: 360855784
-      Chelovek_3: -852532330
+      Kirgis_man: 1034180212
+      Kirgis_manbody: -2061702648
+      Kirgis_manboots: -1179498222
+      Kirgis_manhead: 1053833624
+      Kirgis_woman: -932800723
+      Kirgis_womanbody: -250790014
+      Kirgis_womanboots: 182534180
+      Kirgis_womanhea: -197586334
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

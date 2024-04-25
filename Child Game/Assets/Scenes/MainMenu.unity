@@ -597,6 +597,7 @@ GameObject:
   - component: {fileID: 709470795}
   - component: {fileID: 709470797}
   - component: {fileID: 709470796}
+  - component: {fileID: 709470798}
   m_Layer: 5
   m_Name: GameName
   m_TagString: Untagged
@@ -656,7 +657,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0418\u0433\u0440\u0430 2000"
+  m_Text: "\u041A\u0443\u043B\u044C\u0442\u0443\u0440\u043D\u044B\u0435 \u0438\u0433\u0440\u044B"
 --- !u!222 &709470797
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -665,6 +666,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709470794}
   m_CullTransparentMesh: 1
+--- !u!114 &709470798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709470794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
+  m_EffectDistance: {x: 5, y: 5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &795979127
 GameObject:
   m_ObjectHideFlags: 0

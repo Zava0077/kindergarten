@@ -27,4 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/clothes.unity
     guid: 418f14e7d40043e41a9d9d7e2dab3092
   - enabled: 1
+    path: Assets/Scenes/GamePazli.unity
+    guid: bfddbf3a62e84734e965c9dd29a4d90a
+  - enabled: 1
+    path: Assets/Scenes/Pair.unity
+    guid: ea98d90cc1490ca4f8aad331352a649e
   m_configObjects: {}
