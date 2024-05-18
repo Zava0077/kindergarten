@@ -15,8 +15,8 @@ public class Select : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHa
 
     private void Awake()
     {
-        pos = this.gameObject.transform.position;
         transform = GetComponent<RectTransform>();
+        pos = transform.localPosition;
         group = GetComponent<CanvasGroup>();
     }
     public void OnBeginDrag(PointerEventData pointerEventData)
@@ -28,7 +28,14 @@ public class Select : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHa
 
     public void OnDrag(PointerEventData pointerEventData)
     {
-        transform.anchoredPosition += pointerEventData.delta / canvas.scaleFactor;
+        if (GetComponentInParent<MainScr>().Game.transform.rotation.z == 1)
+        {
+            transform.anchoredPosition -= pointerEventData.delta / canvas.scaleFactor;
+        }
+        else
+        {
+            transform.anchoredPosition += pointerEventData.delta / canvas.scaleFactor;
+        }
 
     }
 

@@ -36,7 +36,7 @@ public class MainScript : MonoBehaviour
 
     public void RestartGame()
     {
-        Audio.Play();
+        //Audio.Play();
         timer = 0f;
         WinObject.SetActive(false);
         foreach (var slot in selectOrnaments)
@@ -49,6 +49,7 @@ public class MainScript : MonoBehaviour
             slot.CodeSlot = 0;
         }
         int random = UnityEngine.Random.Range(0, Sprites.Count / 9);
+        #region Флаги
         switch (random) 
         {
             case 0:
@@ -73,12 +74,15 @@ public class MainScript : MonoBehaviour
                 Flagi = Flags.Poland;
                 break;
         }
+        #endregion
         //int random = 2;
         random = random * 9;
         code = Enumerable.Range(1, 9).OrderBy(x => UnityEngine.Random.value).ToList();
         Debug.Log(Convert.ToString(code[0]) + Convert.ToString(code[1]) + Convert.ToString(code[2]) + Convert.ToString(code[3]) + Convert.ToString(code[4]) + Convert.ToString(code[5]) + Convert.ToString(code[6]) + Convert.ToString(code[7]));
         MainOrnament.sprite = Sprites[random];
         //Debug.Log(Sprites.Count);
+        List<Sprite> sprites = new List<Sprite>();
+        sprites.Clear();
         for (int i = 0; i < selectOrnaments.Count; i++)
         {
             selectOrnaments[i].CodeOrnament = code[i];
@@ -88,16 +92,16 @@ public class MainScript : MonoBehaviour
                 do
                 {
                     rnd = UnityEngine.Random.Range(0, Sprites.Count);
+                    selectOrnaments[i].image.sprite = Sprites[rnd];
                     Debug.Log(rnd);
                 }
-                while (rnd % 9 == 0);
-                selectOrnaments[i].image.sprite = Sprites[rnd];
+                while (rnd % 9 == 0 || sprites.Contains(selectOrnaments[i].image.sprite));
             }
             else
             {
                 selectOrnaments[i].image.sprite = Sprites[code[i] + random];
             }
-
+            sprites.Add(selectOrnaments[i].image.sprite);
         }
     }
 
@@ -110,18 +114,22 @@ public class MainScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //таймер
         if(WinObject.activeSelf == false)
         {
             timer = timer + Time.deltaTime;
             timerText.text = Math.Round(timer, 1).ToString() + " сек";
         }
+        //Проверка на победу
         check.Clear();
         foreach(var slot in slotOrnaments)
         {
             check.Add(slot.CodeSlot);
         }
+        //Победа
         if(check.SequenceEqual<int>(new List<int> { 1,2,3,4,5,6,7,8 }))
         {
+            #region Флаги
             switch ((int)Flagi)
             {
                 case 0:
@@ -140,19 +148,10 @@ public class MainScript : MonoBehaviour
                     FlagText.text = "Молодец! Ты собрал Белорусский орнамент";
                     break;
             }
+            #endregion
             Flag.sprite = FlagSprites[(int)Flagi];
             WinObject.SetActive(true);
             Audio.Play();
-            /*
-            time = time + Time.deltaTime;
-            Debug.Log(time);
-            if(time >= 3f)
-            {
-                Audio.Play();
-                time = 0f;
-                RestartGame();
-            }
-            */
         }
     }
 }

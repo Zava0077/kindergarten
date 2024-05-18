@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,51 +10,74 @@ public class MainScr : MonoBehaviour
 {
     public List<Slot> slots = new List<Slot>();
     public List<Select> selects = new List<Select>();
+    public List<Select> Spys = new List<Select>();
     List<int> code = new List<int>();
     List<int> check = new List<int>();
     public Image Hearth;
     public List<Sprite> sprites = new List<Sprite>();
     float time = 0f;
+    public GameObject Game;
 
     private void RestartGame()
     {
+        //сброс
         foreach (var slot in selects)
         {
             slot.CodePazel = 0;
-            slot.transform.position = slot.pos;
+            slot.transform.localPosition = slot.pos;
         }
         foreach (var slot in slots)
         {
             slot.CodeSlot = 0;
         }
+        //выбераем рандомный пазл
         int random = UnityEngine.Random.Range(0, sprites.Count / 5);
-        //int random = 0;
         random = random * 5;
+        //правильный код для правильного ответа
         code = Enumerable.Range(1, 4).OrderBy(x => UnityEngine.Random.value).ToList();
+        //меняем спрайт у центрального спрайта
         Hearth.sprite = sprites[random];
-        //Debug.Log(Sprites.Count);
+        //начинаем генерировать пазлы
         for (int i = 0; i < selects.Count; i++)
         {
             selects[i].CodePazel = code[i];
             selects[i].image.sprite = sprites[code[i] + random];
 
         }
+        //Генерируем фальшивые куски
+        List<Sprite> sprites2 = new List<Sprite>();
+        foreach (var select in selects)
+        {
+            sprites2.Add(select.image.sprite);
+        }
+        foreach(var spy in Spys)
+        {
+            int rand = 0;
+            do
+            {
+                do
+                {
+                    rand = UnityEngine.Random.Range(0, sprites.Count); 
+                } while (rand % 5 == 0); 
+                spy.image.sprite = sprites[rand];
+            }
+            while (sprites2.Contains(spy.image.sprite) || Spys[0].image.sprite == Spys[1].image.sprite);
+        }
     }
-    // Start is called before the first frame update
     void Start()
     {
+        //при старте игры перезапускаем игру
         RestartGame();
     }
-
-    // Update is called once per frame
     void Update()
     {
+        //проверяем код для правильного ответа
         check.Clear();
         foreach (var slot in slots)
         {
             check.Add(slot.CodeSlot);
         }
-        Debug.Log(check[0] + "" + check[1] + "" + check[2] + "" + check[3]);
+        //если пазлы сложены правильно то
         if (check.SequenceEqual<int>(new List<int> { 1, 2, 3, 4 }))
         {
             time = time + Time.deltaTime;

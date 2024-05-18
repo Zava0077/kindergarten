@@ -7,7 +7,7 @@ public class ButtonPairGame : MonoBehaviour
 {
     public RectTransform r;
 
-    private float flipTime = 0.5f;
+    private float flipTime = 0.3f;
     public bool faceSide = true;
     public bool block = false;
     public bool Finish = false;
@@ -58,6 +58,9 @@ public class ButtonPairGame : MonoBehaviour
             }
             else if(timeCount >= flipTime && isShriking == 1)
             {
+                Vector3 f = r.localScale;
+                f.x = 1;
+                r.localScale = f;
                 isFlipping = false;
             }
         }
@@ -69,7 +72,7 @@ public class ButtonPairGame : MonoBehaviour
         {
             if(automat == false)
             {
-                MainScriptPairGame.Compare.Add(this);
+                GetComponentInParent<MainScriptPairGame>().Compare.Add(this);
             }
             timeCount = 0;
             isFlipping = true;

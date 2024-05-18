@@ -82,6 +82,31 @@ public class MainScriptForClothes : MonoBehaviour
             TaskText.text = "Необходимо одеть человека в азербайджанский национальный костюм";
             TextBackground.text = "Нужно одеть в азербайджанский костюм";
         }
+        else if (Sprites[random].name.Contains("Kazah"))
+        {
+            TaskText.text = "Необходимо одеть человека в казахский национальный костюм";
+            TextBackground.text = "Нужно одеть в казахский костюм";
+        }
+        else if (Sprites[random].name.Contains("Burat"))
+        {
+            TaskText.text = "Необходимо одеть человека в бурятский национальный костюм";
+            TextBackground.text = "Нужно одеть в бурятский костюм";
+        }
+        else if (Sprites[random].name.Contains("German"))
+        {
+            TaskText.text = "Необходимо одеть человека в немецкий национальный костюм";
+            TextBackground.text = "Нужно одеть в немецкий костюм";
+        }
+        else if (Sprites[random].name.Contains("Arman"))
+        {
+            TaskText.text = "Необходимо одеть человека в армянский национальный костюм";
+            TextBackground.text = "Нужно одеть в армянский костюм";
+        }
+        else if (Sprites[random].name.Contains("Tadjick"))
+        {
+            TaskText.text = "Необходимо одеть человека в таджикский национальный костюм";
+            TextBackground.text = "Нужно одеть в таджикский костюм";
+        }
         TaskImage.sprite = Sprites[random];
         code = Enumerable.Range(1, 3).OrderBy(x => UnityEngine.Random.value).ToList();
         for (int i = 0; i < RightVer.Count; i++)

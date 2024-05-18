@@ -17,48 +17,62 @@ public class GameWords : MonoBehaviour
     public Button button1;
     public Button button2;
     public Button button3;
+    public bool block = false;
     public void ClickButton1()
     {
-        if (threerightbutton[0])
+        if (!block)
         {
-            words[1] = button1.GetComponentInChildren<Text>().text + " ";
-            Status = true;
-        }
-        else
-        {
-            image.gameObject.SetActive(true);
-            StatusimageError = true;
+            block = true;
+            if (threerightbutton[0])
+            {
+                words[1] = button1.GetComponentInChildren<Text>().text + " ";
+                Status = true;
+            }
+            else
+            {
+                image.gameObject.SetActive(true);
+                StatusimageError = true;
+            }
         }
     }
     public void ClickButton2()
     {
-        if (threerightbutton[1])
+        if (!block)
         {
-            words[1] = button2.GetComponentInChildren<Text>().text + " ";
-            Status = true;
-        }
-        else
-        {
-            image.gameObject.SetActive(true);
-            StatusimageError = true;
+            block = true;
+            if (threerightbutton[1])
+            {
+                words[1] = button2.GetComponentInChildren<Text>().text + " ";
+                Status = true;
+            }
+            else
+            {
+                image.gameObject.SetActive(true);
+                StatusimageError = true;
+            }
         }
     }
     public void ClickButton3()
     {
-        if (threerightbutton[2])
+        if (!block)
         {
-            words[1] = button3.GetComponentInChildren<Text>().text + " ";
-            Status = true;
-        }
-        else
-        {
-            image.gameObject.SetActive(true);
-            StatusimageError = true;
+            block = true;
+            if (threerightbutton[2])
+            {
+                words[1] = button3.GetComponentInChildren<Text>().text + " ";
+                Status = true;
+            }
+            else
+            {
+                image.gameObject.SetActive(true);
+                StatusimageError = true;
+            }
         }
     }
 
     public void GenerationWords()
     {
+        block = false;
         for (int i = 0; i < threerightbutton.Length; i++) 
         {
             threerightbutton[i] = false;
@@ -340,6 +354,12 @@ public class GameWords : MonoBehaviour
             time = time + Time.deltaTime;
             if(time > 5f)
             {
+                /*
+                foreach(var but in new List<Button> { button1,button2,button3 })
+                {
+                    
+                }
+                */
                 StatusimageError = false;
                 image.gameObject.SetActive(false);
                 GenerationWords();
