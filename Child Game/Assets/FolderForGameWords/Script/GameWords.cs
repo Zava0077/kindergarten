@@ -18,6 +18,7 @@ public class GameWords : MonoBehaviour
     public Button button2;
     public Button button3;
     public bool block = false;
+    public GameObject MainText;
     public void ClickButton1()
     {
         if (!block)
@@ -352,7 +353,8 @@ public class GameWords : MonoBehaviour
         if (StatusimageError) 
         {
             time = time + Time.deltaTime;
-            if(time > 5f)
+            MainText.SetActive(false);
+            if (time > 5f)
             {
                 /*
                 foreach(var but in new List<Button> { button1,button2,button3 })
@@ -360,6 +362,7 @@ public class GameWords : MonoBehaviour
                     
                 }
                 */
+                MainText.SetActive(true);
                 StatusimageError = false;
                 image.gameObject.SetActive(false);
                 GenerationWords();

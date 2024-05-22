@@ -19,6 +19,6 @@ public class ExitButton : MonoBehaviour
 
     public void Exit()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("GameSelection");
     }
 }

@@ -13,6 +13,8 @@ public class Select : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHa
     public int CodePazel;
     public Vector3 pos;
 
+    public Slot currentSlot;
+
     private void Awake()
     {
         transform = GetComponent<RectTransform>();
@@ -24,6 +26,11 @@ public class Select : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHa
         group.alpha = 6f;
         group.blocksRaycasts = false;
         Debug.Log(CodePazel);
+        if (currentSlot != null)
+        {
+            currentSlot.ClearCodeSlot();
+            currentSlot = null;
+        }
     }
 
     public void OnDrag(PointerEventData pointerEventData)

@@ -17,10 +17,15 @@ public class MainScr : MonoBehaviour
     public List<Sprite> sprites = new List<Sprite>();
     float time = 0f;
     public GameObject Game;
+    public GameObject Win;
+    public Text TimerText;
+    float timer = 0f;
 
     private void RestartGame()
     {
         //сброс
+        Win.SetActive(false);
+        timer = 0f;
         foreach (var slot in selects)
         {
             slot.CodePazel = 0;
@@ -80,14 +85,25 @@ public class MainScr : MonoBehaviour
         //если пазлы сложены правильно то
         if (check.SequenceEqual<int>(new List<int> { 1, 2, 3, 4 }))
         {
-            time = time + Time.deltaTime;
             Debug.Log(time);
-            if (time >= 5f)
+            if (time >= 1f)
             {
-                time = 0f;
-                RestartGame();
+                Win.SetActive(true);
+                TimerText.text = Math.Round(timer, 1).ToString() + " сек";
+            }
+            else
+            {
+                time = time + Time.deltaTime;
             }
         }
+        else
+        {
+            timer = timer + Time.deltaTime;
+        }
+    }
+    public void Restart()
+    {
+        RestartGame();
     }
 }
 

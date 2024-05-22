@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class ButtonsMainMenu : MonoBehaviour
 {
+    public GameObject Exit;
+
+    public void Start()
+    {
+        Exit.SetActive(false);
+    }
 
     public void PlayButton()
     {
@@ -18,7 +24,17 @@ public class ButtonsMainMenu : MonoBehaviour
     }
     public void ExitButton()
     {
-        Debug.Log("Выход");
+        Exit.SetActive(true);
+        //Application.Quit();
+    }
+
+    public void ExitExitButton()
+    {
         Application.Quit();
+    }
+
+    public void NoExitButton()
+    {
+        Exit.SetActive(false);
     }
 }

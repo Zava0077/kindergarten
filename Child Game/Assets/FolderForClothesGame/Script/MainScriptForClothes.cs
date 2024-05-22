@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Unity.Mathematics;
 using System.Threading;
+using UnityEngine.U2D;
 
 public class MainScriptForClothes : MonoBehaviour
 {
@@ -24,6 +25,21 @@ public class MainScriptForClothes : MonoBehaviour
     public Text TimerText;
     public Text TextBackground;
 
+    private Dictionary<string, (string taskText, string backgroundText)> textDictionary = new Dictionary<string, (string, string)>()
+    {
+        { "Russia", ("Необходимо одеть человека в русский национальный костюм", "Нужно одеть в русский костюм") },
+        { "Tatar", ("Необходимо одеть человека в татарский национальный костюм", "Нужно одеть в татарский костюм") },
+        { "Belorus", ("Необходимо одеть человека в белорусский национальный костюм", "Нужно одеть в белорусский костюм") },
+        { "Ukrain", ("Необходимо одеть человека в украинский национальный костюм", "Нужно одеть в украинский костюм") },
+        { "Kirgis", ("Необходимо одеть человека в киргизский национальный костюм", "Нужно одеть в киргизский костюм") },
+        { "Azerbaijani", ("Необходимо одеть человека в азербайджанский национальный костюм", "Нужно одеть в азербайджанский костюм") },
+        { "Kazah", ("Необходимо одеть человека в казахский национальный костюм", "Нужно одеть в казахский костюм") },
+        { "Burat", ("Необходимо одеть человека в бурятский национальный костюм", "Нужно одеть в бурятский костюм") },
+        { "German", ("Необходимо одеть человека в немецкий национальный костюм", "Нужно одеть в немецкий костюм") },
+        { "Arman", ("Необходимо одеть человека в армянский национальный костюм", "Нужно одеть в армянский костюм") },
+        { "Tadjick", ("Необходимо одеть человека в таджикский национальный костюм", "Нужно одеть в таджикский костюм") },
+        { "Chuvash", ("Необходимо одеть человека в чувашский национальный костюм","Нужно одеть в чувашский костюм") }
+    };
 
     void Start()
     {
@@ -54,58 +70,13 @@ public class MainScriptForClothes : MonoBehaviour
             button.status = ButtonClothes.StatusClothes.nothing;
         }
         int random = UnityEngine.Random.Range(0, Sprites.Count / 4) * 4;
-        if (Sprites[random].name.Contains("Russia"))
+        foreach (var entry in textDictionary)
         {
-            TaskText.text = "Необходимо одеть человека в русский национальный костюм";
-            TextBackground.text = "Нужно одеть в русский костюм";
-        }else if (Sprites[random].name.Contains("Tatar"))
-        {
-            TaskText.text = "Необходимо одеть человека в татарский национальный костюм";
-            TextBackground.text = "Нужно одеть в татарский костюм";
-        }else if (Sprites[random].name.Contains("Belorus"))
-        {
-            TaskText.text = "Необходимо одеть человека в белорусский национальный костюм";
-            TextBackground.text = "Нужно одеть в белорусский костюм";
-        }
-        else if (Sprites[random].name.Contains("Ukrain"))
-        {
-            TaskText.text = "Необходимо одеть человека в украинский национальный костюм";
-            TextBackground.text = "Нужно одеть в украинский костюм";
-        }
-        else if (Sprites[random].name.Contains("Kirgis"))
-        {
-            TaskText.text = "Необходимо одеть человека в киргизский национальный костюм";
-            TextBackground.text = "Нужно одеть в киргизский костюм";
-        }
-        else if (Sprites[random].name.Contains("Azerbaijani"))
-        {
-            TaskText.text = "Необходимо одеть человека в азербайджанский национальный костюм";
-            TextBackground.text = "Нужно одеть в азербайджанский костюм";
-        }
-        else if (Sprites[random].name.Contains("Kazah"))
-        {
-            TaskText.text = "Необходимо одеть человека в казахский национальный костюм";
-            TextBackground.text = "Нужно одеть в казахский костюм";
-        }
-        else if (Sprites[random].name.Contains("Burat"))
-        {
-            TaskText.text = "Необходимо одеть человека в бурятский национальный костюм";
-            TextBackground.text = "Нужно одеть в бурятский костюм";
-        }
-        else if (Sprites[random].name.Contains("German"))
-        {
-            TaskText.text = "Необходимо одеть человека в немецкий национальный костюм";
-            TextBackground.text = "Нужно одеть в немецкий костюм";
-        }
-        else if (Sprites[random].name.Contains("Arman"))
-        {
-            TaskText.text = "Необходимо одеть человека в армянский национальный костюм";
-            TextBackground.text = "Нужно одеть в армянский костюм";
-        }
-        else if (Sprites[random].name.Contains("Tadjick"))
-        {
-            TaskText.text = "Необходимо одеть человека в таджикский национальный костюм";
-            TextBackground.text = "Нужно одеть в таджикский костюм";
+            if (Sprites[random].name.Contains(entry.Key))
+            {
+                TaskText.text = entry.Value.taskText;
+                TextBackground.text = entry.Value.backgroundText;
+            }
         }
         TaskImage.sprite = Sprites[random];
         code = Enumerable.Range(1, 3).OrderBy(x => UnityEngine.Random.value).ToList();
