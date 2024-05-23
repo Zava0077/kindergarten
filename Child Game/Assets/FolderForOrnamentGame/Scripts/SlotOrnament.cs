@@ -24,10 +24,4 @@ public class SlotOrnament : MonoBehaviour, IDropHandler
             Debug.Log(CodeSlot);
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

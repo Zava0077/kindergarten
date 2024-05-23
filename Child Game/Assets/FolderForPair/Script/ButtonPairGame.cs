@@ -19,6 +19,23 @@ public class ButtonPairGame : MonoBehaviour
     public Image image;
     public Sprite SpriteBack;
     public Sprite SpriteFront;
+    public Text Name;
+
+    private Dictionary<string, string> text = new Dictionary<string, string>()
+    {
+        { "Russia", "Русский" },
+        { "Tatar", "Татар" },
+        { "Belorus", "Белорус" },
+        { "Ukrain", "Украинец" },
+        { "Kirgis", "Киргиз" },
+        { "Azerbaijani", "Азербайджанец" },
+        { "Kazah", "Казах" },
+        { "Burat", "Бурят" },
+        { "German", "Немец" },
+        { "Arman", "Армянин" },
+        { "Tadjick", "Таджик" },
+        { "Chuvash", "Чуваш" }
+    };
 
     void Start()
     {
@@ -46,14 +63,20 @@ public class ButtonPairGame : MonoBehaviour
                 {
                     faceSide = true;
                     image.sprite = SpriteFront;
-                    //Что будет на обратной части
+                    Name.text = "";
                 }
                 else
                 {
                     faceSide = false;
-                    //Что будет на обратной части
                     image.sprite = SpriteBack;
                     Debug.Log(CardNum);
+                    foreach (var entry in text)
+                    {
+                        if (SpriteBack.name.Contains(entry.Key))
+                        {
+                            Name.text = entry.Value;
+                        }
+                    }
                 }
             }
             else if(timeCount >= flipTime && isShriking == 1)

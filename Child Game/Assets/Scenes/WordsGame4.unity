@@ -188,8 +188,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 264954890}
         m_TargetAssemblyTypeName: GameWords, Assembly-CSharp
-        m_MethodName: ClickButton1
-        m_Mode: 1
+        m_MethodName: ClickButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -625,12 +625,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 500821679}
         m_TargetAssemblyTypeName: GameWords, Assembly-CSharp
-        m_MethodName: ClickButton3
-        m_Mode: 1
+        m_MethodName: ClickButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -745,7 +745,7 @@ GameObject:
   - component: {fileID: 149487104}
   - component: {fileID: 149487103}
   m_Layer: 0
-  m_Name: Main CameraRightBottom (1)
+  m_Name: Main CameraRightTop
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1132,12 +1132,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 264954890}
         m_TargetAssemblyTypeName: GameWords, Assembly-CSharp
-        m_MethodName: ClickButton2
-        m_Mode: 1
+        m_MethodName: ClickButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1344,8 +1344,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1824679243}
         m_TargetAssemblyTypeName: GameWords, Assembly-CSharp
-        m_MethodName: ClickButton1
-        m_Mode: 1
+        m_MethodName: ClickButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2237,12 +2237,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1824679243}
         m_TargetAssemblyTypeName: GameWords, Assembly-CSharp
-        m_MethodName: ClickButton2
-        m_Mode: 1
+        m_MethodName: ClickButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2642,8 +2642,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1474735602}
         m_TargetAssemblyTypeName: GameWords, Assembly-CSharp
-        m_MethodName: ClickButton1
-        m_Mode: 1
+        m_MethodName: ClickButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3140,8 +3140,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 500821679}
         m_TargetAssemblyTypeName: GameWords, Assembly-CSharp
-        m_MethodName: ClickButton1
-        m_Mode: 1
+        m_MethodName: ClickButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5104,7 +5104,7 @@ GameObject:
   - component: {fileID: 1550691069}
   - component: {fileID: 1550691068}
   m_Layer: 0
-  m_Name: Main CameraLeftBottom (1)
+  m_Name: Main CameraLeftTop
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5384,12 +5384,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1474735602}
         m_TargetAssemblyTypeName: GameWords, Assembly-CSharp
-        m_MethodName: ClickButton3
-        m_Mode: 1
+        m_MethodName: ClickButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5517,12 +5517,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 264954890}
         m_TargetAssemblyTypeName: GameWords, Assembly-CSharp
-        m_MethodName: ClickButton3
-        m_Mode: 1
+        m_MethodName: ClickButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6069,12 +6069,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1474735602}
         m_TargetAssemblyTypeName: GameWords, Assembly-CSharp
-        m_MethodName: ClickButton2
-        m_Mode: 1
+        m_MethodName: ClickButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6340,12 +6340,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 500821679}
         m_TargetAssemblyTypeName: GameWords, Assembly-CSharp
-        m_MethodName: ClickButton2
-        m_Mode: 1
+        m_MethodName: ClickButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6935,12 +6935,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1824679243}
         m_TargetAssemblyTypeName: GameWords, Assembly-CSharp
-        m_MethodName: ClickButton3
-        m_Mode: 1
+        m_MethodName: ClickButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

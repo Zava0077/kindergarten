@@ -19,48 +19,14 @@ public class GameWords : MonoBehaviour
     public Button button3;
     public bool block = false;
     public GameObject MainText;
-    public void ClickButton1()
+    public void ClickButton(int num)
     {
         if (!block)
         {
             block = true;
-            if (threerightbutton[0])
+            if (threerightbutton[num])
             {
                 words[1] = button1.GetComponentInChildren<Text>().text + " ";
-                Status = true;
-            }
-            else
-            {
-                image.gameObject.SetActive(true);
-                StatusimageError = true;
-            }
-        }
-    }
-    public void ClickButton2()
-    {
-        if (!block)
-        {
-            block = true;
-            if (threerightbutton[1])
-            {
-                words[1] = button2.GetComponentInChildren<Text>().text + " ";
-                Status = true;
-            }
-            else
-            {
-                image.gameObject.SetActive(true);
-                StatusimageError = true;
-            }
-        }
-    }
-    public void ClickButton3()
-    {
-        if (!block)
-        {
-            block = true;
-            if (threerightbutton[2])
-            {
-                words[1] = button3.GetComponentInChildren<Text>().text + " ";
                 Status = true;
             }
             else
@@ -215,23 +181,17 @@ public class GameWords : MonoBehaviour
                 {
                     case 1: 
                         threerightbutton[0] = true;
-                        threerightbutton[1] = true;
-                        threerightbutton[2] = true;
                         button1.GetComponentInChildren<Text>().text = "одежка";
                         button2.GetComponentInChildren<Text>().text = "сумка";
                         button3.GetComponentInChildren<Text>().text = "шапка";
                         break;
                     case 2:
-                        threerightbutton[0] = true;
                         threerightbutton[1] = true;
-                        threerightbutton[2] = true;
                         button1.GetComponentInChildren<Text>().text = "сумка";
                         button2.GetComponentInChildren<Text>().text = "одежка";
                         button3.GetComponentInChildren<Text>().text = "шапка";
                         break;
                     case 3:
-                        threerightbutton[0] = true;
-                        threerightbutton[1] = true;
                         threerightbutton[2] = true;
                         button1.GetComponentInChildren<Text>().text = "сумка";
                         button2.GetComponentInChildren<Text>().text = "шапка";
@@ -275,23 +235,17 @@ public class GameWords : MonoBehaviour
                 {
                     case 1:
                         threerightbutton[0] = true;
-                        threerightbutton[1] = true;
-                        threerightbutton[2] = true;
                         button1.GetComponentInChildren<Text>().text = "нитке";
                         button2.GetComponentInChildren<Text>().text = "рублю";
                         button3.GetComponentInChildren<Text>().text = "карману";
                         break;
                     case 2:
-                        threerightbutton[0] = true;
                         threerightbutton[1] = true;
-                        threerightbutton[2] = true;
                         button1.GetComponentInChildren<Text>().text = "рублю";
                         button2.GetComponentInChildren<Text>().text = "нитке";
                         button3.GetComponentInChildren<Text>().text = "карману";
                         break;
                     case 3:
-                        threerightbutton[0] = true;
-                        threerightbutton[1] = true;
                         threerightbutton[2] = true;
                         button1.GetComponentInChildren<Text>().text = "рублю";
                         button2.GetComponentInChildren<Text>().text = "карману";
@@ -327,7 +281,10 @@ public class GameWords : MonoBehaviour
                 }
                 break;
         }
-
+        for (int i = 0; i < threerightbutton.Length; i++)
+        {
+            Debug.Log(threerightbutton[i]);
+        }
     }
     // Start is called before the first frame update
     void Start()
@@ -356,12 +313,6 @@ public class GameWords : MonoBehaviour
             MainText.SetActive(false);
             if (time > 5f)
             {
-                /*
-                foreach(var but in new List<Button> { button1,button2,button3 })
-                {
-                    
-                }
-                */
                 MainText.SetActive(true);
                 StatusimageError = false;
                 image.gameObject.SetActive(false);

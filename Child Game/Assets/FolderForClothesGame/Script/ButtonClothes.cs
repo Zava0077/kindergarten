@@ -23,11 +23,6 @@ public class ButtonClothes : MonoBehaviour
         Image = GetComponent<Image>();
     }
 
-    void Update()
-    {
-        
-    }
-
     public void Click()
     {
         switch (status)

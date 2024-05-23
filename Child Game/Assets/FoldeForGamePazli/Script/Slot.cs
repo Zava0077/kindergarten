@@ -33,11 +33,5 @@ public class Slot : MonoBehaviour, IDropHandler
             }
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
 

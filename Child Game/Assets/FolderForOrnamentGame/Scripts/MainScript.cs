@@ -36,7 +36,6 @@ public class MainScript : MonoBehaviour
 
     public void RestartGame()
     {
-        //Audio.Play();
         timer = 0f;
         WinObject.SetActive(false);
         foreach (var slot in selectOrnaments)
@@ -75,10 +74,9 @@ public class MainScript : MonoBehaviour
                 break;
         }
         #endregion
-        //int random = 2;
         random = random * 9;
         code = Enumerable.Range(1, 9).OrderBy(x => UnityEngine.Random.value).ToList();
-        Debug.Log(Convert.ToString(code[0]) + Convert.ToString(code[1]) + Convert.ToString(code[2]) + Convert.ToString(code[3]) + Convert.ToString(code[4]) + Convert.ToString(code[5]) + Convert.ToString(code[6]) + Convert.ToString(code[7]));
+        //Debug.Log(Convert.ToString(code[0]) + Convert.ToString(code[1]) + Convert.ToString(code[2]) + Convert.ToString(code[3]) + Convert.ToString(code[4]) + Convert.ToString(code[5]) + Convert.ToString(code[6]) + Convert.ToString(code[7]));
         MainOrnament.sprite = Sprites[random];
         //Debug.Log(Sprites.Count);
         List<Sprite> sprites = new List<Sprite>();
@@ -107,7 +105,6 @@ public class MainScript : MonoBehaviour
 
     void Start()
     {
-        Audio = GetComponent<AudioSource>();
         RestartGame();
     }
 

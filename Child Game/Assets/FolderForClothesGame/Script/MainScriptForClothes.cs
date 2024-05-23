@@ -16,7 +16,6 @@ public class MainScriptForClothes : MonoBehaviour
     public List<Sprite> RightVer = new List<Sprite>(3);
     public List<Sprite> Base = new List<Sprite>();
     public Text text;
-    private List<int> code;
     public Image TaskImage;
     public Text TaskText;
     public GameObject TaskPanel;
@@ -79,7 +78,6 @@ public class MainScriptForClothes : MonoBehaviour
             }
         }
         TaskImage.sprite = Sprites[random];
-        code = Enumerable.Range(1, 3).OrderBy(x => UnityEngine.Random.value).ToList();
         for (int i = 0; i < RightVer.Count; i++)
         {
             RightVer[i] = Sprites[i+random+1];

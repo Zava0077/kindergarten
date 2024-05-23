@@ -64,9 +64,6 @@ public class MainScriptPairGame : MonoBehaviour
             buttons[Random2].CardNum = i;
             buttons[Random1].SpriteBack = sprites[Random3*2];
             buttons[Random2].SpriteBack = sprites[Random3*2+1];
-            Debug.Log(Random1);
-            Debug.Log(Random2);
-            Debug.Log(i);
         }
     }
 
