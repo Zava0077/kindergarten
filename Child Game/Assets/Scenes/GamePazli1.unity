@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 191972805}
   - component: {fileID: 191972807}
   - component: {fileID: 191972804}
+  - component: {fileID: 191972808}
   m_Layer: 5
   m_Name: PazelSpy2
   m_TagString: Untagged
@@ -308,6 +309,18 @@ MonoBehaviour:
   CodePazel: 0
   pos: {x: 0, y: 0, z: 0}
   currentSlot: {fileID: 0}
+--- !u!114 &191972808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191972802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59748d17ac2cb0947aa256b98e8b0837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &273546427
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,6 +334,7 @@ GameObject:
   - component: {fileID: 273546430}
   - component: {fileID: 273546429}
   - component: {fileID: 273546432}
+  - component: {fileID: 273546433}
   m_Layer: 5
   m_Name: Pazel1
   m_TagString: Untagged
@@ -414,6 +428,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &273546433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273546427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59748d17ac2cb0947aa256b98e8b0837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &390150197
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,6 +644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf84a199aa5543419e959e757bbe9d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  select: {fileID: 0}
 --- !u!1 &748798643
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,6 +658,7 @@ GameObject:
   - component: {fileID: 748798646}
   - component: {fileID: 748798645}
   - component: {fileID: 748798648}
+  - component: {fileID: 748798649}
   m_Layer: 5
   m_Name: Pazel2
   m_TagString: Untagged
@@ -724,6 +752,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &748798649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748798643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59748d17ac2cb0947aa256b98e8b0837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &863530451
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,6 +1002,7 @@ GameObject:
   - component: {fileID: 915483228}
   - component: {fileID: 915483227}
   - component: {fileID: 915483230}
+  - component: {fileID: 915483231}
   m_Layer: 5
   m_Name: Pazel4
   m_TagString: Untagged
@@ -1055,6 +1096,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &915483231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915483225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59748d17ac2cb0947aa256b98e8b0837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &938979051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,6 +1614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf84a199aa5543419e959e757bbe9d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  select: {fileID: 0}
 --- !u!1 &1412044613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,6 +1889,7 @@ GameObject:
   - component: {fileID: 1560568919}
   - component: {fileID: 1560568918}
   - component: {fileID: 1560568921}
+  - component: {fileID: 1560568922}
   m_Layer: 5
   m_Name: Pazel3
   m_TagString: Untagged
@@ -1928,6 +1983,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1560568922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560568916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59748d17ac2cb0947aa256b98e8b0837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1752299873
 GameObject:
   m_ObjectHideFlags: 0
@@ -2016,6 +2083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf84a199aa5543419e959e757bbe9d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  select: {fileID: 0}
 --- !u!1 &1795168593
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,11 +2112,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1545058676}
   - {fileID: 1752299874}
   - {fileID: 616368169}
   - {fileID: 1312872029}
   - {fileID: 1972906236}
-  - {fileID: 1545058676}
   m_Father: {fileID: 1542302627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2223,6 +2291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf84a199aa5543419e959e757bbe9d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  select: {fileID: 0}
 --- !u!1 &1974592794
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,6 +2305,7 @@ GameObject:
   - component: {fileID: 1974592797}
   - component: {fileID: 1974592799}
   - component: {fileID: 1974592796}
+  - component: {fileID: 1974592800}
   m_Layer: 5
   m_Name: PazelSpy1
   m_TagString: Untagged
@@ -2329,6 +2399,18 @@ MonoBehaviour:
   CodePazel: 0
   pos: {x: 0, y: 0, z: 0}
   currentSlot: {fileID: 0}
+--- !u!114 &1974592800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974592794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59748d17ac2cb0947aa256b98e8b0837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2007720659
 GameObject:
   m_ObjectHideFlags: 0

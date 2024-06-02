@@ -24,16 +24,19 @@ public class MainScr : MonoBehaviour
     private void RestartGame()
     {
         //сброс
+        time = 0f;
         Win.SetActive(false);
         timer = 0f;
-        foreach (var slot in selects)
+        foreach (var select in selects)
         {
-            slot.CodePazel = 0;
-            slot.transform.localPosition = slot.pos;
+            select.CodePazel = 0;
+            select.transform.localPosition = select.pos;  
+            select.currentSlot = null;
         }
         foreach (var slot in slots)
         {
             slot.CodeSlot = 0;
+            slot.select = null;
         }
         //выбераем рандомный пазл
         int random = UnityEngine.Random.Range(0, sprites.Count / 5);

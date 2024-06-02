@@ -7,26 +7,50 @@ using UnityEngine.UI;
 
 public class GameWords : MonoBehaviour
 {
-    private bool[] threerightbutton = new bool[3];
     private bool StatusimageError = false;
+    private int RightAnswer;
     public Image image;
     private float time = 0f;
     private bool Status = false;
-    private string[] words = new string[3];
     public Text text;
-    public Button button1;
-    public Button button2;
-    public Button button3;
+    public List<Button> buttons;
     public bool block = false;
     public GameObject MainText;
+    public GameObject WinObject;
+
+    private List<Words> words = new List<Words>()
+    {
+        new Words("За словом в … не лезут.", new List<string>(){"карман", "чемодан", "сумка"}),
+        new Words("По … встречают, по уму провожают.", new List<string>(){"одежке", "прическе" , "пальто" }), 
+        new Words("В хорошем … и пенек красивый.", new List<string>(){"платье", "настроении", "камзоле"}),
+        new Words("Два … – пара.", new List<string>(){"сапога", "брата", "солнца"}),
+        new Words("Береги … снову, а честь смолоду.", new List<string>(){"платье", "сарафан", "сапоги"}),
+        new Words("Друг лучше старый, а … новая.", new List<string>(){ "одежда", "сумка", "шапка"}),
+        new Words("На воре и … горит.", new List<string>(){ "шапка", "тулуп", "звезда" }),
+        new Words("С миру по … — голому рубаха.", new List<string>(){ "нитке", "рублю", "карману"}),
+        new Words("Какова пряха, такова на ней … ", new List<string>(){ "рубаха", "пижама", "сумка"}),
+        new Words("Без труда не выловишь и … из пруда.", new List<string>(){ "рыбку", "звезду", "лягушку"}),
+
+        new Words("Курочка по зёрнышку клюёт, да … бывает.", new List<string>(){"сыта", "ведро", "желудок"}),
+        new Words("В здоровом теле — здоровый ….", new List<string>(){"дух", "желудок", "человек" }),
+        new Words("Слово не воробей, вылетит — не ….", new List<string>(){ "поймаешь", "догонешь", "возвратишь"}),
+        new Words("Старый друг лучше новых ….", new List<string>(){ "двух", "знакомых", "книг"}),
+        new Words("С глаз долой — из … вон.", new List<string>(){ "сердца", "памяти", "головы"}),
+        new Words("У семи нянек дитя без ….", new List<string>(){ "глаза", "заботы", "будущего"}),
+        new Words("Аппетит приходит во время ….", new List<string>(){ "еды", "обеда", "готовки" }),
+        new Words("Не рой другому …, сам в него попадёшь.", new List<string>(){ "яму", "капкан", "ловушку"}),
+        new Words("Лес рубят — щепки ….", new List<string>(){ "летят", "падают", "разлетаются"}),
+        new Words("Век живи - век ….", new List<string>(){ "учись", "играй", "отдыхай"}),
+    };
+
     public void ClickButton(int num)
     {
         if (!block)
         {
             block = true;
-            if (threerightbutton[num])
+            if (num == RightAnswer)
             {
-                words[1] = button1.GetComponentInChildren<Text>().text + " ";
+                text.text = text.text.Replace("…", buttons[num].GetComponentInChildren<Text>().text);
                 Status = true;
             }
             else
@@ -40,269 +64,43 @@ public class GameWords : MonoBehaviour
     public void GenerationWords()
     {
         block = false;
-        for (int i = 0; i < threerightbutton.Length; i++) 
+        int Random = UnityEngine.Random.Range(0, words.Count-1);
+        text.text = words[Random].text;
+        RightAnswer = UnityEngine.Random.Range(0, words[Random].answer.Count - 1);
+        buttons[RightAnswer].GetComponentInChildren<Text>().text = words[Random].answer[0];
+        List<Button> answer = new List<Button>() { buttons[0], buttons[1], buttons[2] };
+        answer.Remove(buttons[RightAnswer]);
+        int Random1 = UnityEngine.Random.Range(1, words[Random].answer.Count - 1);
+        answer[0].GetComponentInChildren<Text>().text = words[Random].answer[Random1];
+        if (Random1 == 1)
         {
-            threerightbutton[i] = false;
+            answer[1].GetComponentInChildren<Text>().text = words[Random].answer[2];
+        }
+        else
+        {
+            answer[1].GetComponentInChildren<Text>().text = words[Random].answer[1];
         }
 
-        int random = Random.Range(0, 9);
-        switch (random)
-        {
-            case 0:
-                words[0] = "За словом в ";
-                words[1] = "........ ";
-                words[2] = "не лезут.";
-                int RandomButton = Random.Range(1, 3);
-                switch (RandomButton)
-                {
-                    case 1:
-                        threerightbutton[0] = true;
-                        button1.GetComponentInChildren<Text>().text = "карман";
-                        button2.GetComponentInChildren<Text>().text = "чемодан";
-                        button3.GetComponentInChildren<Text>().text = "сумку";
-                        break;
-                    case 2:
-                        threerightbutton[1] = true;
-                        button1.GetComponentInChildren<Text>().text = "чемодан";
-                        button2.GetComponentInChildren<Text>().text = "карман";
-                        button3.GetComponentInChildren<Text>().text = "сумку";
-                        break;
-                    case 3:
-                        threerightbutton[2] = true;
-                        button1.GetComponentInChildren<Text>().text = "сумка";
-                        button2.GetComponentInChildren<Text>().text = "чемодан";
-                        button3.GetComponentInChildren<Text>().text = "карман";
-                        break;
-                }
-                break;
-            case 1:
-                words[0] = "По ";
-                words[1] = "........ ";
-                words[2] = "встречают, по уму провожают.";
-                int RandomButton1 = Random.Range(1, 3);
-                switch(RandomButton1)
-                {
-                    case 1: threerightbutton[0] = true;
-                        button1.GetComponentInChildren<Text>().text = "одежке";
-                        button2.GetComponentInChildren<Text>().text = "прическе";
-                        button3.GetComponentInChildren<Text>().text = "пальто";
-                        break;
-                    case 2: threerightbutton[1] = true;
-                        button1.GetComponentInChildren<Text>().text = "прическе";
-                        button2.GetComponentInChildren<Text>().text = "одежке";
-                        button3.GetComponentInChildren<Text>().text = "пальто";
-                        break;
-                    case 3: threerightbutton[2] = true;
-                        button1.GetComponentInChildren<Text>().text = "прическе";
-                        button2.GetComponentInChildren<Text>().text = "пальто";
-                        button3.GetComponentInChildren<Text>().text = "одежке";
-                        break;
-                }
-                break;
-            case 2:
-                words[0] = "В хорошем ";
-                words[1] = "........ ";
-                words[2] = "и пенек красивый.";
-                int RandomButton2 = Random.Range(1, 3);
-                switch (RandomButton2) 
-                {
-                    case 1:threerightbutton[0] = true;
-                        button1.GetComponentInChildren<Text>().text = "платье";
-                        button2.GetComponentInChildren<Text>().text = "настроении";
-                        button3.GetComponentInChildren<Text>().text = "камзоле";
-                        break;
-                    case 2:threerightbutton[1] = true;
-                        button1.GetComponentInChildren<Text>().text = "настроении";
-                        button2.GetComponentInChildren<Text>().text = "платье";
-                        button3.GetComponentInChildren<Text>().text = "камзоле";
-                        break;
-                    case 3:threerightbutton[2] = true;
-                        button1.GetComponentInChildren<Text>().text = "камзоле";
-                        button2.GetComponentInChildren<Text>().text = "настроении";
-                        button3.GetComponentInChildren<Text>().text = "платье";
-                        break;
-                }
-                break;
-            case 3:
-                words[0] = "Два ";
-                words[1] = "........ ";
-                words[2] = "- пара.";
-                int RandomButton3 = Random.Range(1, 3);
-                switch(RandomButton3)
-                {
-                    case 1:threerightbutton[0] = true;
-                        button1.GetComponentInChildren<Text>().text = "сапога";
-                        button2.GetComponentInChildren<Text>().text = "брата";
-                        button3.GetComponentInChildren<Text>().text = "солнца";
-                        break;
-                    case 2:threerightbutton[1] = true;
-                        button1.GetComponentInChildren<Text>().text = "брата";
-                        button2.GetComponentInChildren<Text>().text = "сапога";
-                        button3.GetComponentInChildren<Text>().text = "солнца";
-                        break;
-                    case 3:threerightbutton[2] = true;
-                        button1.GetComponentInChildren<Text>().text = "брата";
-                        button2.GetComponentInChildren<Text>().text = "солнца";
-                        button3.GetComponentInChildren<Text>().text = "сапога";
-                        break;
-                }
-
-                break;
-            case 4:
-                words[0] = "Береги ";
-                words[1] = "........ ";
-                words[2] = "снову, а честь смолоду.";
-                int RandomButton4 = Random.Range(1, 3);
-                switch (RandomButton4)
-                {
-                    case 1:threerightbutton[0] = true;
-                        button1.GetComponentInChildren<Text>().text = "платье";
-                        button2.GetComponentInChildren<Text>().text = "сарафан";
-                        button3.GetComponentInChildren<Text>().text = "сапоги";
-                        break;
-                    case 2: threerightbutton[1] = true;
-                        button1.GetComponentInChildren<Text>().text = "сарафан";
-                        button2.GetComponentInChildren<Text>().text = "платье";
-                        button3.GetComponentInChildren<Text>().text = "сапоги";
-                        break;
-                    case 3: threerightbutton[2] = true;
-                        button1.GetComponentInChildren<Text>().text = "сарафан";
-                        button2.GetComponentInChildren<Text>().text = "сапоги";
-                        button3.GetComponentInChildren<Text>().text = "платье";
-                        break;
-                }
-                break;
-            case 5:
-                words[0] = "Друг лучше старый, а ";
-                words[1] = "........ ";
-                words[2] = "новая.";
-                int RandomButton5 = Random.Range(1, 3);
-                switch (RandomButton5)
-                {
-                    case 1: 
-                        threerightbutton[0] = true;
-                        button1.GetComponentInChildren<Text>().text = "одежка";
-                        button2.GetComponentInChildren<Text>().text = "сумка";
-                        button3.GetComponentInChildren<Text>().text = "шапка";
-                        break;
-                    case 2:
-                        threerightbutton[1] = true;
-                        button1.GetComponentInChildren<Text>().text = "сумка";
-                        button2.GetComponentInChildren<Text>().text = "одежка";
-                        button3.GetComponentInChildren<Text>().text = "шапка";
-                        break;
-                    case 3:
-                        threerightbutton[2] = true;
-                        button1.GetComponentInChildren<Text>().text = "сумка";
-                        button2.GetComponentInChildren<Text>().text = "шапка";
-                        button3.GetComponentInChildren<Text>().text = "одежка";
-                        break;
-                }
-                break;
-            case 6:
-                words[0] = "На воре и ";
-                words[1] = "........ ";
-                words[2] = "горит.";
-                int RandomButton6 = Random.Range(1, 3);
-                switch (RandomButton6)
-                {
-                    case 1:
-                        threerightbutton[0] = true;
-                        button1.GetComponentInChildren<Text>().text = "шапка";
-                        button2.GetComponentInChildren<Text>().text = "тулуп";
-                        button3.GetComponentInChildren<Text>().text = "звезда";
-                        break;
-                    case 2:
-                        threerightbutton[1] = true;
-                        button1.GetComponentInChildren<Text>().text = "тулуп";
-                        button2.GetComponentInChildren<Text>().text = "шапка";
-                        button3.GetComponentInChildren<Text>().text = "звезда";
-                        break;
-                    case 3:
-                        threerightbutton[2] = true;
-                        button1.GetComponentInChildren<Text>().text = "тулуп";
-                        button2.GetComponentInChildren<Text>().text = "звезда";
-                        button3.GetComponentInChildren<Text>().text = "шапка";
-                        break;
-                }
-                break;
-            case 7:
-                words[0] = "С миру по ";
-                words[1] = "........";
-                words[2] = " - голому рубаха";
-                int RandomButton7 = Random.Range(1, 3);
-                switch (RandomButton7)
-                {
-                    case 1:
-                        threerightbutton[0] = true;
-                        button1.GetComponentInChildren<Text>().text = "нитке";
-                        button2.GetComponentInChildren<Text>().text = "рублю";
-                        button3.GetComponentInChildren<Text>().text = "карману";
-                        break;
-                    case 2:
-                        threerightbutton[1] = true;
-                        button1.GetComponentInChildren<Text>().text = "рублю";
-                        button2.GetComponentInChildren<Text>().text = "нитке";
-                        button3.GetComponentInChildren<Text>().text = "карману";
-                        break;
-                    case 3:
-                        threerightbutton[2] = true;
-                        button1.GetComponentInChildren<Text>().text = "рублю";
-                        button2.GetComponentInChildren<Text>().text = "карману";
-                        button3.GetComponentInChildren<Text>().text = "нитке";
-                        break;
-                }
-                break;
-            case 8:
-                words[0] = "Какова пряха, такова на ней ";
-                words[1] = "........";
-                words[2] = " ";
-                int RandomButton8 = Random.Range(1, 3);
-                switch (RandomButton8)
-                {
-                    case 1:
-                        threerightbutton[0] = true;
-                        button1.GetComponentInChildren<Text>().text = "рубаха";
-                        button2.GetComponentInChildren<Text>().text = "пижама";
-                        button3.GetComponentInChildren<Text>().text = "сумка";
-                        break;
-                    case 2:
-                        threerightbutton[1] = true;
-                        button1.GetComponentInChildren<Text>().text = "пимажа";
-                        button2.GetComponentInChildren<Text>().text = "рубаха";
-                        button3.GetComponentInChildren<Text>().text = "сумка";
-                        break;
-                    case 3:
-                        threerightbutton[2] = true;
-                        button1.GetComponentInChildren<Text>().text = "пижама";
-                        button2.GetComponentInChildren<Text>().text = "сумка";
-                        button3.GetComponentInChildren<Text>().text = "рубаха";
-                        break;
-                }
-                break;
-        }
-        for (int i = 0; i < threerightbutton.Length; i++)
-        {
-            Debug.Log(threerightbutton[i]);
-        }
     }
     // Start is called before the first frame update
     void Start()
     {
         GenerationWords();
         image.gameObject.SetActive(false);
+        WinObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        text.text = words[0] + words[1] + words[2];
         if (Status)
         {
+            WinObject.SetActive(true);
             time = time + Time.deltaTime;
             if(time > 5f)
             {
                 Status = false;
+                WinObject.SetActive(false);
                 GenerationWords();
                 time = 0f;
             }
@@ -319,6 +117,18 @@ public class GameWords : MonoBehaviour
                 GenerationWords();
                 time = 0f;
             }
+        }
+    }
+
+    class Words
+    {
+        public string text;
+        public List<string> answer;
+
+        public Words(string txt,List<string> answers)
+        {
+            text = txt;
+            answer = answers;
         }
     }
 }

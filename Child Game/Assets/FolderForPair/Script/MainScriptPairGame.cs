@@ -32,6 +32,7 @@ public class MainScriptPairGame : MonoBehaviour
             but.Finish = false;
             but.faceSide = true;
             ints.Clear();
+            but.Name.text = "";
             try
             {
                 but.image.sprite = SpriteFront;

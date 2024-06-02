@@ -23,6 +23,8 @@ public class MainScript : MonoBehaviour
     public Text timerText;
     public Text FlagText;
     public Image Flag;
+    public GameObject Select;
+    bool Helping;
     public enum Flags
     {
         Russia,
@@ -34,78 +36,175 @@ public class MainScript : MonoBehaviour
     Flags Flagi;
 
 
-    public void RestartGame()
+    public void Help()
     {
+        if (Helping == true)
+        {
+            Helping = false;
+        }
+        else
+        {
+            Helping = true;
+        }
+    }
+
+    public void SelectOrnament()
+    {
+        if(Select.activeSelf == true)
+        {
+            Select.SetActive(false);
+        }
+        else
+        {
+            Select.SetActive(true);
+        }
+    }
+
+
+    public void RestartGame(int chosenum)
+    {
+        Helping = false;
+        foreach (var slot in slotOrnaments)
+        {
+            //slot.Status.visible = false;
+        }
+        Select.SetActive(false);
+        bool chose;
+        if (chosenum == -1)
+        {
+            chose = false;
+        }
+        else { chose = true; }
         timer = 0f;
         WinObject.SetActive(false);
-        foreach (var slot in selectOrnaments)
+        foreach (var select in selectOrnaments)
         {
-            slot.CodeOrnament = 0;
-            slot.transform.localPosition = slot.pos;
+            select.CodeOrnament = 0;
+            select.transform.localPosition = select.pos;
+            select.currentSlot = null;
         }
         foreach (var slot in slotOrnaments)
         {
             slot.CodeSlot = 0;
         }
-        int random = UnityEngine.Random.Range(0, Sprites.Count / 9);
-        #region Флаги
-        switch (random) 
+        //фрагмент кода когда выбрана генерация
+        if (chose)
         {
-            case 0:
-                Flagi = Flags.Russia;
-                break;
-            case 1:
-                Flagi = Flags.Russia;
-                break;
-            case 2:
-                Flagi = Flags.Russia;
-                break;
-            case 3:
-                Flagi = Flags.Tatarstan;
-                break;
-            case 4:
-                Flagi = Flags.Tatarstan;
-                break;
-            case 5:
-                Flagi = Flags.Poland;
-                break;
-            case 6:
-                Flagi = Flags.Poland;
-                break;
-        }
-        #endregion
-        random = random * 9;
-        code = Enumerable.Range(1, 9).OrderBy(x => UnityEngine.Random.value).ToList();
-        //Debug.Log(Convert.ToString(code[0]) + Convert.ToString(code[1]) + Convert.ToString(code[2]) + Convert.ToString(code[3]) + Convert.ToString(code[4]) + Convert.ToString(code[5]) + Convert.ToString(code[6]) + Convert.ToString(code[7]));
-        MainOrnament.sprite = Sprites[random];
-        //Debug.Log(Sprites.Count);
-        List<Sprite> sprites = new List<Sprite>();
-        sprites.Clear();
-        for (int i = 0; i < selectOrnaments.Count; i++)
-        {
-            selectOrnaments[i].CodeOrnament = code[i];
-            if (code[i] == 9)
+            #region Флаги
+            switch (chosenum)
             {
-                int rnd;
-                do
+                case 0:
+                    Flagi = Flags.Russia;
+                    break;
+                case 1:
+                    Flagi = Flags.Russia;
+                    break;
+                case 2:
+                    Flagi = Flags.Russia;
+                    break;
+                case 3:
+                    Flagi = Flags.Tatarstan;
+                    break;
+                case 4:
+                    Flagi = Flags.Tatarstan;
+                    break;
+                case 5:
+                    Flagi = Flags.Poland;
+                    break;
+                case 6:
+                    Flagi = Flags.Poland;
+                    break;
+            }
+            #endregion
+            chosenum = chosenum * 9;
+            code = Enumerable.Range(1, 9).OrderBy(x => UnityEngine.Random.value).ToList();
+            MainOrnament.sprite = Sprites[chosenum];
+            List<Sprite> sprites = new List<Sprite>();
+            sprites.Clear();
+            for (int i = 0; i < selectOrnaments.Count; i++)
+            {
+                selectOrnaments[i].CodeOrnament = code[i];
+                if (code[i] == 9)
                 {
-                    rnd = UnityEngine.Random.Range(0, Sprites.Count);
-                    selectOrnaments[i].image.sprite = Sprites[rnd];
-                    Debug.Log(rnd);
+                    int rnd;
+                    do
+                    {
+                        rnd = UnityEngine.Random.Range(0, Sprites.Count);
+                        selectOrnaments[i].image.sprite = Sprites[rnd];
+                        Debug.Log(rnd);
+                    }
+                    while (rnd % 9 == 0 || sprites.Contains(selectOrnaments[i].image.sprite));
                 }
-                while (rnd % 9 == 0 || sprites.Contains(selectOrnaments[i].image.sprite));
+                else
+                {
+                    selectOrnaments[i].image.sprite = Sprites[code[i] + chosenum];
+                }
+                sprites.Add(selectOrnaments[i].image.sprite);
             }
-            else
+        }
+        //Фрагмент кода если генерация происходит рандомно
+        else
+        {
+            int random = UnityEngine.Random.Range(0, Sprites.Count / 9);
+            #region Флаги
+            switch (random)
             {
-                selectOrnaments[i].image.sprite = Sprites[code[i] + random];
+                case 0:
+                    Flagi = Flags.Russia;
+                    break;
+                case 1:
+                    Flagi = Flags.Russia;
+                    break;
+                case 2:
+                    Flagi = Flags.Russia;
+                    break;
+                case 3:
+                    Flagi = Flags.Tatarstan;
+                    break;
+                case 4:
+                    Flagi = Flags.Tatarstan;
+                    break;
+                case 5:
+                    Flagi = Flags.Poland;
+                    break;
+                case 6:
+                    Flagi = Flags.Poland;
+                    break;
             }
-            sprites.Add(selectOrnaments[i].image.sprite);
+            #endregion
+            random = random * 9;
+            code = Enumerable.Range(1, 9).OrderBy(x => UnityEngine.Random.value).ToList();
+            //Debug.Log(Convert.ToString(code[0]) + Convert.ToString(code[1]) + Convert.ToString(code[2]) + Convert.ToString(code[3]) + Convert.ToString(code[4]) + Convert.ToString(code[5]) + Convert.ToString(code[6]) + Convert.ToString(code[7]));
+            MainOrnament.sprite = Sprites[random];
+            //Debug.Log(Sprites.Count);
+            List<Sprite> sprites = new List<Sprite>();
+            sprites.Clear();
+            for (int i = 0; i < selectOrnaments.Count; i++)
+            {
+                selectOrnaments[i].CodeOrnament = code[i];
+                if (code[i] == 9)
+                {
+                    int rnd;
+                    do
+                    {
+                        rnd = UnityEngine.Random.Range(0, Sprites.Count);
+                        selectOrnaments[i].image.sprite = Sprites[rnd];
+                        Debug.Log(rnd);
+                    }
+                    while (rnd % 9 == 0 || sprites.Contains(selectOrnaments[i].image.sprite));
+                }
+                else
+                {
+                    selectOrnaments[i].image.sprite = Sprites[code[i] + random];
+                }
+                sprites.Add(selectOrnaments[i].image.sprite);
+            }
         }
     }
 
     void Start()
     {
-        RestartGame();
+        RestartGame(-1);
     }
 
     // Update is called once per frame
@@ -148,7 +247,35 @@ public class MainScript : MonoBehaviour
             #endregion
             Flag.sprite = FlagSprites[(int)Flagi];
             WinObject.SetActive(true);
-            Audio.Play();
+            //Audio.Play();
+        }
+        //подсказки
+        else if(Helping == true)
+        {
+            foreach(var slot in slotOrnaments)
+            {
+                slot.Status.SetActive(true);
+            }
+            for(int i = 0;i < slotOrnaments.Count; i++)
+            {
+                if (slotOrnaments[i].CodeSlot != i + 1)
+                {
+                    //неверно
+                    slotOrnaments[i].answer = false;
+                }
+                else
+                {
+                    //верно
+                    slotOrnaments[i].answer = true;
+                }
+            }
+        }
+        if(Helping == false)
+        {
+            foreach (var slot in slotOrnaments)
+            {
+                slot.Status.SetActive(false);
+            }
         }
     }
 }

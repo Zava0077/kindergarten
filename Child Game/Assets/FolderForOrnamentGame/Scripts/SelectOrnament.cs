@@ -13,18 +13,25 @@ public class SelectOrnament : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
     public Image image;
     public int CodeOrnament;
     public Vector3 pos;
+    public SlotOrnament currentSlot;
 
     private void Awake()
     {
         transform = GetComponent<RectTransform>();
         pos = transform.localPosition;
         group = GetComponent<CanvasGroup>();
+
     }
     public void OnBeginDrag(PointerEventData pointerEventData)
     {
         group.alpha = 6f;
         group.blocksRaycasts = false;
         Debug.Log(CodeOrnament);
+        if (currentSlot != null)
+        {
+            currentSlot.ClearCodeSlot();
+            currentSlot = null;
+        }
     }
 
     public void OnDrag(PointerEventData pointerEventData)
