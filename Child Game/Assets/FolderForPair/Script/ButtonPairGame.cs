@@ -20,6 +20,7 @@ public class ButtonPairGame : MonoBehaviour
     public Sprite SpriteBack;
     public Sprite SpriteFront;
     public Text Name;
+    private AudioSource audio;
 
     private Dictionary<string, string> text = new Dictionary<string, string>()
     {
@@ -39,6 +40,7 @@ public class ButtonPairGame : MonoBehaviour
 
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         r = GetComponent<RectTransform>();
         DistancePerTime = r.localScale.x / flipTime;
         image = GetComponent<Image>();
@@ -93,6 +95,7 @@ public class ButtonPairGame : MonoBehaviour
     {
         if (!isFlipping && !block && !Finish)
         {
+            audio.Play();
             if(automat == false)
             {
                 GetComponentInParent<MainScriptPairGame>().Compare.Add(this);

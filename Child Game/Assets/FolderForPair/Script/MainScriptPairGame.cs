@@ -18,9 +18,13 @@ public class MainScriptPairGame : MonoBehaviour
     public GameObject win;
     float timer = 0f;
     public Text text;
+    AudioSource audioSource;
+    public List<AudioClip> clipAnswer = new List<AudioClip>();
+    bool audioPlayed;
 
     void Restart()
     {
+        audioPlayed = false;
         foreach(var but in buttons)
         {
             win.SetActive(false);
@@ -70,6 +74,7 @@ public class MainScriptPairGame : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         Restart();
     }
 
@@ -83,6 +88,13 @@ public class MainScriptPairGame : MonoBehaviour
                 {
                     Compare[0].Finish = true;
                     Compare[1].Finish = true;
+                    audioSource.clip = clipAnswer[0];
+                    audioSource.Play();
+                }
+                else
+                {
+                    audioSource.clip = clipAnswer[1];
+                    audioSource.Play();
                 }
                 foreach (var but in buttons)
                 {
@@ -135,7 +147,18 @@ public class MainScriptPairGame : MonoBehaviour
         }
         if (allbutfinish)
         {
-            win.SetActive(true);
+            time = time + Time.deltaTime;
+            if(time > 2.5f)
+            {
+                if (audioPlayed == false)
+                {
+                    audioPlayed = true;
+                    audioSource.clip = clipAnswer[2];
+                    audioSource.Play();
+                }
+                win.SetActive(true);
+                time = 0f;
+            }
         }
     }
 

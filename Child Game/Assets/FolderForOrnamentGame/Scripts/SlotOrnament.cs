@@ -40,6 +40,7 @@ public class SlotOrnament : MonoBehaviour, IDropHandler
             select = pointerEventData.pointerDrag.GetComponent<SelectOrnament>();
             if (select != null)
             {
+                AudioSource.Play();
                 pointerEventData.pointerDrag.GetComponent<RectTransform>().position = GetComponent<RectTransform>().position;
                 CodeSlot = pointerEventData.pointerDrag.GetComponent<SelectOrnament>().CodeOrnament;
                 select.currentSlot = this;

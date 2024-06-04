@@ -14,27 +14,31 @@ public class ButtonsMainMenu : MonoBehaviour
 
     public void PlayButton()
     {
-        Debug.Log("Играть");
+        DontDestroy.Instance.PlaySomeSounds();
         SceneManager.LoadScene("GameSelection");
     }
     public void SettingsButton()
     {
+        DontDestroy.Instance.PlaySomeSounds();
         SceneManager.LoadScene("SettingsMenu");
         Debug.Log("Настройки");
     }
     public void ExitButton()
     {
+        DontDestroy.Instance.PlaySomeSounds();
         Exit.SetActive(true);
         //Application.Quit();
     }
 
     public void ExitExitButton()
     {
+        DontDestroy.Instance.PlaySomeSounds();
         Application.Quit();
     }
 
     public void NoExitButton()
     {
+        DontDestroy.Instance.PlaySomeSounds();
         Exit.SetActive(false);
     }
 }

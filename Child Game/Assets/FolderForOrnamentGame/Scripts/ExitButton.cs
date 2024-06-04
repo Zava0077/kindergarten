@@ -19,6 +19,7 @@ public class ExitButton : MonoBehaviour
 
     public void Exit()
     {
+        DontDestroy.Instance.PlaySomeSounds();
         SceneManager.LoadScene("GameSelection");
     }
 }

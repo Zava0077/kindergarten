@@ -17,6 +17,9 @@ public class GameWords : MonoBehaviour
     public bool block = false;
     public GameObject MainText;
     public GameObject WinObject;
+    public List<AudioClip> audioClips = new List<AudioClip>();
+    private AudioSource audioSource;
+    bool audioPlayed;
 
     private List<Words> words = new List<Words>()
     {
@@ -63,6 +66,7 @@ public class GameWords : MonoBehaviour
 
     public void GenerationWords()
     {
+        audioPlayed = false;
         block = false;
         int Random = UnityEngine.Random.Range(0, words.Count-1);
         text.text = words[Random].text;
@@ -85,6 +89,7 @@ public class GameWords : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         GenerationWords();
         image.gameObject.SetActive(false);
         WinObject.SetActive(false);
@@ -95,6 +100,12 @@ public class GameWords : MonoBehaviour
     {
         if (Status)
         {
+            if(audioPlayed == false)
+            {
+                audioSource.clip = audioClips[0];
+                audioSource.Play();
+                audioPlayed = true;
+            }
             WinObject.SetActive(true);
             time = time + Time.deltaTime;
             if(time > 5f)
@@ -107,6 +118,12 @@ public class GameWords : MonoBehaviour
         }
         if (StatusimageError) 
         {
+            if (audioPlayed == false)
+            {
+                audioSource.clip = audioClips[1];
+                audioSource.Play();
+                audioPlayed = true;
+            }
             time = time + Time.deltaTime;
             MainText.SetActive(false);
             if (time > 5f)

@@ -25,6 +25,7 @@ public class MainScript : MonoBehaviour
     public Image Flag;
     public GameObject Select;
     bool Helping;
+    bool _audioPlaying;
     public enum Flags
     {
         Russia,
@@ -36,8 +37,14 @@ public class MainScript : MonoBehaviour
     Flags Flagi;
 
 
+    private void Awake()
+    {
+        Audio = GetComponent<AudioSource>();
+    }
+
     public void Help()
     {
+        DontDestroy.Instance.PlaySomeSounds();
         if (Helping == true)
         {
             Helping = false;
@@ -50,7 +57,8 @@ public class MainScript : MonoBehaviour
 
     public void SelectOrnament()
     {
-        if(Select.activeSelf == true)
+        DontDestroy.Instance.PlaySomeSounds();
+        if (Select.activeSelf == true)
         {
             Select.SetActive(false);
         }
@@ -63,6 +71,11 @@ public class MainScript : MonoBehaviour
 
     public void RestartGame(int chosenum)
     {
+        if(chosenum != -2)
+        {
+            DontDestroy.Instance.PlaySomeSounds();
+        }
+        _audioPlaying = false;
         Helping = false;
         foreach (var slot in slotOrnaments)
         {
@@ -70,7 +83,7 @@ public class MainScript : MonoBehaviour
         }
         Select.SetActive(false);
         bool chose;
-        if (chosenum == -1)
+        if (chosenum <= -1)
         {
             chose = false;
         }
@@ -204,7 +217,7 @@ public class MainScript : MonoBehaviour
 
     void Start()
     {
-        RestartGame(-1);
+        RestartGame(-2);
     }
 
     // Update is called once per frame
@@ -246,8 +259,12 @@ public class MainScript : MonoBehaviour
             }
             #endregion
             Flag.sprite = FlagSprites[(int)Flagi];
+            if(_audioPlaying == false)
+            {
+                Audio.Play();
+                _audioPlaying = true;
+            }
             WinObject.SetActive(true);
-            //Audio.Play();
         }
         //подсказки
         else if(Helping == true)

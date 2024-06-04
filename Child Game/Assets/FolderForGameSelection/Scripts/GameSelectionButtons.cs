@@ -20,6 +20,7 @@ public class GameSelectionButtons : MonoBehaviour
 
     public void OrnamentGame()
     {
+        DontDestroy.Instance.PlaySomeSounds();
         //SceneManager.LoadScene("OrnamentGame");
         ButtonsSelection.SetActive(false);
         select = "OrnamentGame";
@@ -28,6 +29,7 @@ public class GameSelectionButtons : MonoBehaviour
 
     public void GameWords()
     {
+        DontDestroy.Instance.PlaySomeSounds();
         //SceneManager.LoadScene("WordsGame");
         ButtonsSelection.SetActive(false);
         select = "WordsGame";
@@ -36,6 +38,7 @@ public class GameSelectionButtons : MonoBehaviour
     
     public void ClothesGame()
     {
+        DontDestroy.Instance.PlaySomeSounds();
         //SceneManager.LoadScene("clothes");
         ButtonsSelection.SetActive(false);
         select = "clothes";
@@ -44,6 +47,7 @@ public class GameSelectionButtons : MonoBehaviour
 
     public void PuzzleGame()
     {
+        DontDestroy.Instance.PlaySomeSounds();
         //SceneManager.LoadScene("GamePazli");
         ButtonsSelection.SetActive(false);
         select = "GamePazli";
@@ -52,6 +56,7 @@ public class GameSelectionButtons : MonoBehaviour
     
     public void PairGame()
     {
+        DontDestroy.Instance.PlaySomeSounds();
         //SceneManager.LoadScene("Pair");
         ButtonsSelection.SetActive(false);
         select = "Pair";
@@ -60,7 +65,8 @@ public class GameSelectionButtons : MonoBehaviour
 
     public void Back()
     {
-        if(ButtonsSelection.active)
+        DontDestroy.Instance.PlaySomeSounds();
+        if (ButtonsSelection.active)
         {
             SceneManager.LoadScene("MainMenu");
         }
@@ -73,12 +79,14 @@ public class GameSelectionButtons : MonoBehaviour
 
     public void OnePlayer()
     {
+        DontDestroy.Instance.PlaySomeSounds();
         NumPlayer = 1;
         GoPlay();
     }
 
     public void FourPlayer()
     {
+        DontDestroy.Instance.PlaySomeSounds();
         NumPlayer = 4;
         GoPlay();
     }

@@ -17,14 +17,20 @@ public class ButtonClothes : MonoBehaviour
     public StatusClothes status;
     public Image Image;
     public MainScriptForClothes main;
+    private AudioSource audioSource;
+    public List<AudioClip> clipList;
 
     void Awake()
     {
         Image = GetComponent<Image>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void Click()
     {
+        int random = UnityEngine.Random.Range(0, clipList.Count);
+        audioSource.clip = clipList[random];
+        audioSource.Play();
         switch (status)
         {
             case StatusClothes.head:

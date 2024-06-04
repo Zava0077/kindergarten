@@ -8,10 +8,11 @@ public class Slot : MonoBehaviour, IDropHandler
 {
     public int CodeSlot { get; set; }
     public Select select;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void ClearCodeSlot()
@@ -30,6 +31,7 @@ public class Slot : MonoBehaviour, IDropHandler
                 pointerEventData.pointerDrag.GetComponent<RectTransform>().position = GetComponent<RectTransform>().position;
                 CodeSlot = pointerEventData.pointerDrag.GetComponent<Select>().CodePazel;
                 select.currentSlot = this;
+                audioSource.Play();
                 Debug.Log(CodeSlot);
             }
         }

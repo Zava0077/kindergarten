@@ -23,6 +23,8 @@ public class MainScriptForClothes : MonoBehaviour
     public GameObject WinPanel;
     public Text TimerText;
     public Text TextBackground;
+    private AudioSource audioSource;
+    bool audioPlayed;
 
     private Dictionary<string, (string taskText, string backgroundText)> textDictionary = new Dictionary<string, (string, string)>()
     {
@@ -43,20 +45,29 @@ public class MainScriptForClothes : MonoBehaviour
     void Start()
     {
         RestartGame();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void CloseTaskPanel()
     {
+        DontDestroy.Instance.PlaySomeSounds();
         TaskPanel.SetActive(false);
     }
     public void OpenTaskPanel()
     {
+        DontDestroy.Instance.PlaySomeSounds();
         TaskPanel.SetActive(true);
     }
 
 
     public void RestartGame()
     {
+        DontDestroy.Instance.PlaySomeSounds();
+        foreach (var button in buttons)
+        {
+            button.GetComponent<Button>().enabled = true;
+        }
+        audioPlayed = false;
         TaskPanel.SetActive(true);
         time = 0f;
         WinPanel.SetActive(false);
@@ -133,7 +144,16 @@ public class MainScriptForClothes : MonoBehaviour
         }
         if (Win==3)
         {
+            if(audioPlayed == false)
+            {
+                audioSource.Play();
+                audioPlayed = true;
+            }
             TimerText.text = Math.Round(time, 1).ToString() + " сек";
+            foreach(var button in buttons)
+            {
+                button.GetComponent<Button>().enabled = false;
+            }
             WinPanel.SetActive(true);
         }
         else

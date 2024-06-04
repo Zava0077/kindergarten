@@ -20,10 +20,13 @@ public class MainScr : MonoBehaviour
     public GameObject Win;
     public Text TimerText;
     float timer = 0f;
+    private AudioSource audioSource;
+    bool audioPlayed;
 
     private void RestartGame()
     {
         //сброс
+        audioPlayed = false;
         time = 0f;
         Win.SetActive(false);
         timer = 0f;
@@ -76,6 +79,7 @@ public class MainScr : MonoBehaviour
     {
         //при старте игры перезапускаем игру
         RestartGame();
+        audioSource = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -91,6 +95,11 @@ public class MainScr : MonoBehaviour
             Debug.Log(time);
             if (time >= 1f)
             {
+                if(audioPlayed == false)
+                {
+                    audioPlayed = true;
+                    audioSource.Play();
+                }
                 Win.SetActive(true);
                 TimerText.text = Math.Round(timer, 1).ToString() + " сек";
             }
