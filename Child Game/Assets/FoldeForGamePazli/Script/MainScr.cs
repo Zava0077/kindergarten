@@ -22,6 +22,20 @@ public class MainScr : MonoBehaviour
     float timer = 0f;
     private AudioSource audioSource;
     bool audioPlayed;
+    bool Helping = false;
+
+    public void ButtonHelp()
+    {
+        DontDestroy.Instance.PlaySomeSounds();
+        if(Helping == false)
+        {
+            Helping = true;
+        }
+        else
+        {
+            Helping = false;
+        }
+    }
 
     private void RestartGame()
     {
@@ -111,6 +125,34 @@ public class MainScr : MonoBehaviour
         else
         {
             timer = timer + Time.deltaTime;
+        }
+        //подсказки
+        if (Helping)
+        {
+            foreach (var slot in slots)
+            {
+                slot.Status.SetActive(true);
+            }
+            for (int i = 0; i < slots.Count; i++)
+            {
+                if (slots[i].CodeSlot != i + 1)
+                {
+                    //неверно
+                    slots[i].Answer = false;
+                }
+                else
+                {
+                    //верно
+                    slots[i].Answer = true;
+                }
+            }
+        }
+        else
+        {
+            foreach (var slot in slots)
+            {
+                slot.Status.SetActive(false);
+            }
         }
     }
     public void Restart()

@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class ValumeMaster : MonoBehaviour
 {
-    public string volumeParametr = "MasterVolume";
+    public string volumeParametr;
     public AudioMixer mixer;
     public Slider slider;
 
-    private float _volumeValue;
+    private float _volumeValue = 1f;
     private const float _multiplayer = 20f;
 
     public void Awake()

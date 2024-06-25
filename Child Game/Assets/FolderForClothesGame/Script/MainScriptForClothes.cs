@@ -62,7 +62,10 @@ public class MainScriptForClothes : MonoBehaviour
 
     public void RestartGame()
     {
-        DontDestroy.Instance.PlaySomeSounds();
+        if(DontDestroy.Instance != null)
+        {
+            DontDestroy.Instance.PlaySomeSounds();
+        }
         foreach (var button in buttons)
         {
             button.GetComponent<Button>().enabled = true;

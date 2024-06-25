@@ -4,6 +4,7 @@ using System;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.Mathematics;
 
 
 public class MainScript : MonoBehaviour
@@ -24,7 +25,7 @@ public class MainScript : MonoBehaviour
     public Text FlagText;
     public Image Flag;
     public GameObject Select;
-    bool Helping;
+    bool Helping = false;
     bool _audioPlaying;
     public enum Flags
     {
@@ -76,7 +77,6 @@ public class MainScript : MonoBehaviour
             DontDestroy.Instance.PlaySomeSounds();
         }
         _audioPlaying = false;
-        Helping = false;
         foreach (var slot in slotOrnaments)
         {
             //slot.Status.visible = false;
@@ -146,14 +146,16 @@ public class MainScript : MonoBehaviour
                         selectOrnaments[i].image.sprite = Sprites[rnd];
                         Debug.Log(rnd);
                     }
-                    while (rnd % 9 == 0 || sprites.Contains(selectOrnaments[i].image.sprite));
+                    while (rnd % 9 == 0 || (rnd >= chosenum && rnd <= chosenum + 9));
+                    sprites.Add(selectOrnaments[i].image.sprite);
                 }
                 else
                 {
                     selectOrnaments[i].image.sprite = Sprites[code[i] + chosenum];
+                    sprites.Add(selectOrnaments[i].image.sprite);
                 }
-                sprites.Add(selectOrnaments[i].image.sprite);
             }
+            Debug.Log("" + sprites.Count);
         }
         //Фрагмент кода если генерация происходит рандомно
         else
@@ -204,14 +206,16 @@ public class MainScript : MonoBehaviour
                         selectOrnaments[i].image.sprite = Sprites[rnd];
                         Debug.Log(rnd);
                     }
-                    while (rnd % 9 == 0 || sprites.Contains(selectOrnaments[i].image.sprite));
+                    while (rnd % 9 == 0 || (rnd >= random && rnd <= random + 9));
+                    sprites.Add(selectOrnaments[i].image.sprite);
                 }
                 else
                 {
                     selectOrnaments[i].image.sprite = Sprites[code[i] + random];
+                    sprites.Add(selectOrnaments[i].image.sprite);
                 }
-                sprites.Add(selectOrnaments[i].image.sprite);
             }
+            Debug.Log(sprites.Count);
         }
     }
 
@@ -287,7 +291,7 @@ public class MainScript : MonoBehaviour
                 }
             }
         }
-        if(Helping == false)
+        else
         {
             foreach (var slot in slotOrnaments)
             {

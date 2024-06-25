@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class Slot : MonoBehaviour, IDropHandler
 {
     public int CodeSlot { get; set; }
     public Select select;
     private AudioSource audioSource;
+    public GameObject Status;
+    public bool Answer;
+    public List<Sprite> Sprites = new List<Sprite>();
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +37,20 @@ public class Slot : MonoBehaviour, IDropHandler
                 audioSource.Play();
                 Debug.Log(CodeSlot);
             }
+        }
+    }
+
+    private void Update()
+    {
+        if (Answer == false)
+        {
+            //nepravilno
+            Status.gameObject.GetComponent<Image>().sprite = Sprites[0];
+        }
+        else
+        {
+            //pravilno
+            Status.gameObject.GetComponent<Image>().sprite = Sprites[1];
         }
     }
 }

@@ -196,7 +196,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -8287,7 +8287,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -9143,7 +9143,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1501326359}
   m_HandleRect: {fileID: 1501326357}
   m_Direction: 2
-  m_Value: 0.00000020689883
+  m_Value: 0
   m_Size: 0.43269232
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -9576,7 +9576,7 @@ MonoBehaviour:
   WinObject: {fileID: 1943488565}
   Game: {fileID: 1735455816}
   timerText: {fileID: 834155978}
-  FlagText: {fileID: 283093113}
+  FlagText: {fileID: 527760248}
   Flag: {fileID: 1989899985}
   Select: {fileID: 1794461725}
 --- !u!81 &374953899
@@ -11255,7 +11255,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -11372,7 +11372,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -14466,7 +14466,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 65721463}
   m_HandleRect: {fileID: 65721462}
   m_Direction: 2
-  m_Value: 0
+  m_Value: -0.000000051724708
   m_Size: 0.43269232
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -18577,7 +18577,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1694230284}
   m_HandleRect: {fileID: 1694230282}
   m_Direction: 2
-  m_Value: 0
+  m_Value: -0.00000020689883
   m_Size: 0.43269232
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -19989,7 +19989,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -21998,7 +21998,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -22092,7 +22092,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -23831,7 +23831,7 @@ MonoBehaviour:
   WinObject: {fileID: 36632377}
   Game: {fileID: 596947882}
   timerText: {fileID: 1383656052}
-  FlagText: {fileID: 1127810619}
+  FlagText: {fileID: 862898960}
   Flag: {fileID: 882502262}
   Select: {fileID: 403220361}
 --- !u!82 &1276301272
@@ -31014,7 +31014,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -32037,7 +32037,7 @@ MonoBehaviour:
   WinObject: {fileID: 1739939615}
   Game: {fileID: 1328768609}
   timerText: {fileID: 219406573}
-  FlagText: {fileID: 1541446276}
+  FlagText: {fileID: 1376649957}
   Flag: {fileID: 1470545649}
   Select: {fileID: 302236447}
 --- !u!81 &1816423709
@@ -34467,7 +34467,7 @@ MonoBehaviour:
   WinObject: {fileID: 1505055709}
   Game: {fileID: 2016988112}
   timerText: {fileID: 414570436}
-  FlagText: {fileID: 82011746}
+  FlagText: {fileID: 197323168}
   Flag: {fileID: 1094081159}
   Select: {fileID: 2100263204}
 --- !u!81 &1927643139
